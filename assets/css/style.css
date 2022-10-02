@@ -571,6 +571,14 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+#about {
+  background-color: rgba(153, 33, 34, 0.5);
+}
+
+.about h2 {
+  padding-top: 50px;
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -792,6 +800,10 @@ section {
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
+#ref {
+  background-color:rgba(153, 33,34, 0.5);
+}
+
 .clients {
   padding: 15px 0;
   text-align: center;
@@ -819,6 +831,14 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+#testimonials {
+  background-color: rgba(211, 55, 56, 0.5);
+}
+
+.testimonials h2 {
+  padding-top: 50px;
+}
+
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
@@ -1301,6 +1321,10 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+.team h2 {
+  padding-top: 50px;
+}
+
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
@@ -1379,13 +1403,18 @@ section {
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
+.pricing h2 {
+  padding-top: 50px;
+}
+
 .pricing .box {
   padding: 40px 20px;
   text-align: center;
   border-radius: 8px;
   position: relative;
   overflow: hidden;
-  background: #fefefe;
+  background: #992122;
+  
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
 }
 
@@ -1439,20 +1468,39 @@ section {
 .pricing .box .btn-wrap {
   padding: 15px;
   text-align: center;
+  
 }
 
 .pricing .box .btn-buy {
   display: inline-block;
   padding: 10px 40px;
   border-radius: 4px;
-  color: #2487ce;
+  color: #cccccc;
+  /*color: #2487ce;*/
+  background: #992122;
   transition: none;
   font-size: 14px;
   font-weight: 400;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   transition: 0.3s;
-  border: 2px solid #2487ce;
+  border: 2px solid #992122;
+}
+
+.pricing .box .btn-buy1 {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 4px;
+  color: #992122;
+  /*color: #2487ce;*/
+  background: #cccccc;
+  transition: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+  border: 2px solid #cccccc;
 }
 
 .pricing .box .btn-buy:hover {
