@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-3">
+                    <a href="./index.html" class="logo"><img src="./img/fejlec.jpg" alt="" class="img-fluid"></a>
+                    <p style="font-size: 10pt;">Európa Tréning Szervezetfejlesztő és Tanácsadó Kft.</p>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-lg-5">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Rólunk
+                                </a>
+                                <ul class="dropdown-menu" style="background-color: #9c1418;">
+                                    <li><a class="dropdown-item" href="./index.html#about"
+                                            style="color: white;">Cégismertető</a></li>
+                                    <li><a class=" dropdown-item" href="./index.html#team" style="color: white;">
+                                            Szakértőink</a></li>
+
+                                    <li><a class=" dropdown-item" href="./index.html#testimonials"
+                                            style="color: white;">
+                                            Rólunk mondták</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Szolgáltatások
+                                </a>
+                                <ul class="dropdown-menu" style="background-color: #9c1418;">
+                                    <li><a class="dropdown-item" href="./diagnostic_services.html"
+                                            style="color: white;">Diagnosztika</a></li>
+                                    <li><a class="dropdown-item" href="./od_services.html"
+                                            style="color: white;">Szervezetfejlesztés</a></li>
+
+                                    <li><a class="dropdown-item" href="./human_services.html"
+                                            style="color: white;">Humánfejlesztés</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Referenciák</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Kapcsolat</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- End Navbar-->
+
+    <!-- Szolgaltatasok-->
+
+    <div class="card text-bg-dark">
+        <img src="./img/nyitokep1.png" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <div class="container text-center" style="padding-top: 200px;">
+                <div class="row">
+                    <div class="col-lg-3 col-md-2">
+                        Column
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <div class="card text-bg-dark" style="height: 300px; margin: 0%;">
+                            <img src="./img/boxok.png" class="card-img-fluid" alt="...">
+                            <div class="card-img-overlay">
+                                <img src="./img/diagnosztika1.png" width="60px" style="margin: 0%;">
+                                <p style="color: black; font-weight: bold; margin-bottom: 40px; font-size: small;">
+                                    DIAGNOSZTIKA</p>
+                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">Vezetői
+                                    diagnosztika</p>
+                                <i class="bi bi-caret-down-fill" style="color: #9c1418;;"></i>
+                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">Ügyfél
+                                    diagnosztika</p>
+                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
+                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">
+                                    Megfigyelési szempontrendszer</p>
+                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <div class="card text-bg-dark">
+                            <img src="./img/boxok.png" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <img src="./img/szervezetfejlesztes2.png" width="60px" style="margin: 0%;">
+                                <p style="color: black; font-weight: bold; margin-bottom: 40px; font-size: small;">
+                                    SZERVEZETFEJLESZTÉS</p>
+                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">
+                                    Szervezettervezés</p>
+                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
+                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">
+                                    Szervezet korszerűsítés</p>
+                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
+                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">
+                                    Folyamatmenedzsment</p>
+                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <div class="card text-bg-dark">
+                            <img src="./img/boxok.png" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <img src="./img/humanfejlesztes2.png" width="60px" style="margin: 0%;">
+                                <p style="color: black; font-weight: bold; margin-bottom: 40px; font-size: small;">
+                                    HUMÁNFEJLESZTÉS</p>
+                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">Workshop
+                                </p>
+                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
+                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">Tréning
+                                </p>
+                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
+                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">
+                                    Coaching</p>
+                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        Column
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Szolgaltatasok-->
+
+    <!-- About-->
+
+    <div class="container text-center" style="padding-top: 50px; background-color: #9c1418;">
+        <div class="row">
+            <div class="col-lg-3">
+                Column
+            </div>
+            <div class="col-lg-6">
+                <h2 style="color: white; font-size: 28pt;">
+                    RÓLUNK
+                </h2>>
+                <p style="color: white; text-align: justify;">
+                    Az Európa Tréning Szervezetfejlesztő és Tanácsadó Kft. Magyarország egyik nagymúltú
+                    szervezetfejlesztő és
+                    tanácsadó cége, amely több mint 20 éve dolgozik elhivatottan az emberi erőforrás fejlesztése
+                    területén.
+                    Tevékenysége kiterjed mind a versenyszféra, mind a közigazgatás területeire. A minőség garanciája a
+                    vállalati
+                    és vezetői tapasztalattal rendelkező trénerek, a szervezetfejlesztési szakértők és a
+                    szervezetpszichológusok
+                    elkötelezett együttműködése.
+                </p>
+                <p style="color: white; text-align: justify;">
+                    Megbízóink igényei alapján alakítjuk programjainkat, amelyek elsődleges célja a piaci
+                    versenyképesség
+                    erősítése és a változásokhoz való alkalmazkodás segítése. Munkamódszerünk, valamint a gondosan
+                    felépített
+                    fejlesztési koncepció garantálja a fejlesztési programok hatékony hasznosulását, amelyet változatos
+                    eszközökkel mérünk, ezáltal biztosítva a transzparenciát és az elégedettséget mind a résztvevők,
+                    mind a
+                    vezetőik számára.
+                </p>
+            </div>
+            <div class="col-lg-3">
+                Column
+            </div>
+        </div>
+    </div>
+
+    <!-- End About-->
+
+    <!-- Team -->
+    <div class="container text-center"
+        style="padding-top: 30px; padding-bottom: 30px; background-color: rgba(0,0,0,0.7);">
+        <div class="row">
+            <div class="col-lg-3">
+                Column
+            </div>
+            <div class="col-lg-6">
+                <h2 style="color: white; font-size: 28pt;">
+                    MUNKATÁRSAINK
+                </h2>>
+                <div class="card-group">
+                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                        <img src="./img/11zon_cropped.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: white; font-size: 12pt;">DR. DURUGY ANDRÁS</h5>
+                            <p class="card-text" style="color: white; font-size: 8pt;">ügyvezető</p>
+
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                        <img src="./img/11zon_cropped (1).png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: white; font-size: 12pt;">KÉZELI KRISZTINA</h5>
+                            <p class="card-text" style="color: white; font-size: 8pt;">pénzügyi vezető</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                        <img src="./img/11zon_cropped (1).png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: white; font-size: 12pt;">VÁGVÖLGYI JULIANNA</h5>
+                            <p class="card-text" style="color: white; font-size: 8pt;">szervezetfejlesztési szakértő</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                        <img src="./img/11zon_cropped.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: white; font-size: 12pt;">SUM ISTVÁN</h5>
+                            <p class="card-text" style="color: white; font-size: 8pt;">szervezetfejlesztési szakértő</p>
+
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                        <img src="./img/11zon_cropped (1).png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: white; font-size: 12pt;">HALÁSZ ERIKA</h5>
+                            <p class="card-text" style="color: white; font-size: 8pt;">irodavezető</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                Column
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                Column
+            </div>
+            <div class="col-lg-6">
+
+                <div class="card-group">
+                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                        <img src="./img/11zon_cropped.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: white; font-size: 12pt;">SCHNEIDER TAMÁS</h5>
+                            <p class="card-text" style="color: white; font-size: 8pt;">vezető szakértő, tréner</p>
+
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                        <img src="./img/11zon_cropped.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: white; font-size: 12pt;">BELINSZKI ZOLTÁN</h5>
+                            <p class="card-text" style="color: white; font-size: 8pt;">vezető szakértő, tréner</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                        <img src="./img/11zon_cropped.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: white; font-size: 12pt;">SZEKÉR KÁROLY</h5>
+                            <p class="card-text" style="color: white; font-size: 8pt;">vezető szakértő, tréner</p>
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                        <img src="./img/11zon_cropped (1).png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: white; font-size: 12pt;">DURUGY ANNA</h5>
+                            <p class="card-text" style="color: white; font-size: 8pt;">viselkedéselemző,
+                                Captain-szakértő</p>
+
+                        </div>
+                    </div>
+                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                        <img src="./img/11zon_cropped (1).png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: white; font-size: 12pt;">SZABÓ EDINA</h5>
+                            <p class="card-text" style="color: white; font-size: 8pt;">pszichológus, coach, szakértő</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                Column
+            </div>
+        </div>
+    </div>
+
+    <!-- End Team -->
+    <!-- About us -->
+    <div class="container text-center"
+        style="padding-top: 30px; padding-bottom: 30px; background-color: rgba(0,0,0,0.3);">
+        <div class="row">
+            <div class="col-lg-3"></div>
+
+            <div class="col-lg-6">
+                <h2 style="color: black; font-size: 28pt;">
+                    RÓLUNK MONDTÁK
+                </h2>>
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            Az Európa Tréning Szervezetfejlesztő és Tanácsadó Kft. vezetői
+                                            kompetencia-diagnózisa és fejlesztési
+                                            programja lehetővé tette a vállalatvezetés számára a célzott vezetői kör
+                                            kompetenciáinak objektív
+                                            felmérését, megismerését, fejlesztési pontok meghatározását. Jó
+                                            tapasztalataink alapján ajánljuk az
+                                            Európa Tréning Kft-t vezetői kompetencia-diagnózis és fejlesztési program
+                                            területen komplex szakértői,
+                                            tanácsadói tevékenység ellátására.
+                                        </p>
+                                        <p style="text-align: left;">Tóth István</p>
+                                        <p style="text-align: left; font-size: 9pt;">vezérigazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">Nyírségvíz</p>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="background-color: #9c1418; padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify; color: white;">
+                                            Az Európa Tréning Kft. kollégái minden közös projektünk alkalmával,
+                                            maximális szakértelemmel, precíz
+                                            dokumentációs fegyelemmel, partnerorientált hozzáállással támogatják a
+                                            programok sikerességét. A
+                                            programok minden esetben jól szervezetten, jó hangulatban, egy gondosan
+                                            felépített szakmai előkészítés
+                                            és irányítás mellett zajlottak. Az Európa Tréning Kft. egy olyan megbízható,
+                                            rugalmas, szakmailag
+                                            magasan kvalifikált szakértői csapat, akit szívesen ajánlok minden olyan
+                                            cégvezető/ HR vezető
+                                            figyelmébe, aki számára fontos érték a munkavállalók fejlődése, a
+                                            csapatszellem és összetartás
+                                            kialakítása!
+                                        </p>
+                                        <p style="text-align: left; color: white;">Gulácsi Éva</p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">személyzeti igazgató
+                                        </p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">Szuro-Trade Kft.</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            Az együttműködés során az Európa Tréning szakemberei magas szintű
+                                            kompetenciája és professzionalizmusa
+                                            segítette kollegáink fejlesztési irányainak meghatározását, mely mind
+                                            egyéni, mind munkáltatói szinten
+                                            kiemelten kamatoztathatunk. Közös tevékenységünk időszakában minden
+                                            résztvevő munkavállalónk
+                                            kifejezetten élvezte a jó hangulatú workshopokat, visszajelzést kaptak
+                                            önmagukról, a csoportban
+                                            betöltött szerepükről, és közösen meghatározásra kerültek azok a képzési,
+                                            fejlesztési irányelvek, melyek
+                                            a további közös munkát, hosszútávon a gördülékeny együttműködést és
+                                            problémamegoldást segítik. Az Európa
+                                            Tréning Kft. munkájára és szakmai támogatására a jövőben is számítunk.
+                                        </p>
+                                        <p style="text-align: left;">dr. Nagyiványiné Fodor Katalin</p>
+                                        <p style="text-align: left; font-size: 9pt;">ügyvezető igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">MKB-Pannónia Egészség- és
+                                            Önsegélyező Pénztár</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            Az Európa Tréning Kft. kollégái minden közös projektünk alkalmával,
+                                            maximális szakértelemmel, precíz
+                                            dokumentációs fegyelemmel, partnerorientált hozzáállással támogatják a
+                                            programok sikerességét. A
+                                            programok minden esetben jól szervezetten, jó hangulatban, egy gondosan
+                                            felépített szakmai előkészítés
+                                            és irányítás mellett zajlottak. Az Európa Tréning Kft. egy olyan megbízható,
+                                            rugalmas, szakmailag
+                                            magasan kvalifikált szakértői csapat, akit szívesen ajánlok minden olyan
+                                            cégvezető/ HR vezető
+                                            figyelmébe, aki számára fontos érték a munkavállalók fejlődése, a
+                                            csapatszellem és összetartás
+                                            kialakítása!
+                                        </p>
+                                        <p style="text-align: left;">Gulácsi Éva</p>
+                                        <p style="text-align: left; font-size: 9pt;">személyzeti igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">Szuro-Trade Kft.</p>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="background-color: #9c1418; padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify; color: white;">
+                                            Az együttműködés során az Európa Tréning szakemberei magas szintű
+                                            kompetenciája és professzionalizmusa
+                                            segítette kollegáink fejlesztési irányainak meghatározását, mely mind
+                                            egyéni, mind munkáltatói szinten
+                                            kiemelten kamatoztathatunk. Közös tevékenységünk időszakában minden
+                                            résztvevő munkavállalónk
+                                            kifejezetten élvezte a jó hangulatú workshopokat, visszajelzést kaptak
+                                            önmagukról, a csoportban
+                                            betöltött szerepükről, és közösen meghatározásra kerültek azok a képzési,
+                                            fejlesztési irányelvek, melyek
+                                            a további közös munkát, hosszútávon a gördülékeny együttműködést és
+                                            problémamegoldást segítik. Az Európa
+                                            Tréning Kft. munkájára és szakmai támogatására a jövőben is számítunk.
+                                        </p>
+                                        <p style="text-align: left; color: white;">dr. Nagyiványiné Fodor Katalin</p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">ügyvezető igazgató
+                                        </p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">MKB-Pannónia
+                                            Egészség- és
+                                            Önsegélyező Pénztár</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            A kollégák a felmérések eredményét hitelesnek, az azzal kapcsolatos
+                                            visszajelzést és kiértékelést
+                                            hasznosnak és a mindennapi életbe beilleszthetőnek értékelték. Az elvégzett
+                                            munka eredményeképp jobban
+                                            felkészültnek, tudatosabbnak érzem a szervezet vezetőit a kellemetlen
+                                            problémák és mindennapi
+                                            konfliktusok kezelésére.
+                                        </p>
+                                        <p style="text-align: left;">Lukács-Szalkay Petra</p>
+                                        <p style="text-align: left; font-size: 9pt;">ügyvezető igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">MKB Nyugdíjpénztár</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            Az együttműködés során az Európa Tréning szakemberei magas szintű
+                                            kompetenciája és professzionalizmusa
+                                            segítette kollegáink fejlesztési irányainak meghatározását, mely mind
+                                            egyéni, mind munkáltatói szinten
+                                            kiemelten kamatoztathatunk. Közös tevékenységünk időszakában minden
+                                            résztvevő munkavállalónk
+                                            kifejezetten élvezte a jó hangulatú workshopokat, visszajelzést kaptak
+                                            önmagukról, a csoportban
+                                            betöltött szerepükről, és közösen meghatározásra kerültek azok a képzési,
+                                            fejlesztési irányelvek, melyek
+                                            a további közös munkát, hosszútávon a gördülékeny együttműködést és
+                                            problémamegoldást segítik. Az Európa
+                                            Tréning Kft. munkájára és szakmai támogatására a jövőben is számítunk.
+                                        </p>
+                                        <p style="text-align: left;">dr. Nagyiványiné Fodor Katalin</p>
+                                        <p style="text-align: left; font-size: 9pt;">ügyvezető igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">MKB-Pannónia Egészség- és
+                                            Önsegélyező Pénztár</p>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="background-color: #9c1418; padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify; color: white;">
+                                            A kollégák a felmérések eredményét hitelesnek, az azzal kapcsolatos
+                                            visszajelzést és kiértékelést
+                                            hasznosnak és a mindennapi életbe beilleszthetőnek értékelték. Az elvégzett
+                                            munka eredményeképp jobban
+                                            felkészültnek, tudatosabbnak érzem a szervezet vezetőit a kellemetlen
+                                            problémák és mindennapi
+                                            konfliktusok kezelésére.
+                                        </p>
+                                        <p style="text-align: left; color: white;">Lukács-Szalkay Petra</p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">ügyvezető igazgató
+                                        </p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">MKB Nyugdíjpénztár
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            A vezetőképző program során elkötelezett és magas szakmai színvonalú
+                                            trénerek munkája következtében
+                                            sikeres és eredményes fejlesztés valósult meg. A program hatékonysága
+                                            egyaránt tapasztalható szervezeti
+                                            szinten és az egyéni fejlesztési célok tekintetében is.
+                                        </p>
+                                        <p style="text-align: left;">dr. Barna Tímea</p>
+                                        <p style="text-align: left; font-size: 9pt;">igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">NÉBIH</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-lg-3"></div>
+
+        </div>
+
+    </div>
+    <!-- End About us -->
+
+    <!-- Clients -->
+
+    <div class="container text-center" style="padding-top: 30px; padding-bottom: 30px; background-color: white;">
+        <div class="row">
+            <div class="col-lg-3"></div>
+
+            <div class="col-lg-6">
+                <h2 style="color: #9c1418; font-size: 28pt;">
+                    AKIK MINKET VÁLASZTOTTAK
+                </h2>>
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/Elso_sor.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Masodik_sor.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Harmadik_sor.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Negyedik_sor.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Otodik_sor.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Hatodik_sor.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Hetedik_sor.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- End Clients -->
+
+    <!-- Contact -->
+
+    <div class="container text-center"
+        style="padding-top: 30px; padding-bottom: 30px; background-color: rgba(0,0,0,0.3);">
+        <div class="row">
+            <h2 style="color: black; font-size: 28pt;">
+                VEGYE FEL VELÜNK A KAPCSOLATOT
+            </h2>>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-4" style="text-align: left;">
+                <iframe style="border:0; width: 100%; height: 270px;"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.6591946227677!2d19.057898715818055!3d47.49655220356657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc4267290903%3A0xbeb463ab7628bd4b!2sBudapest%2C%20Wessel%C3%A9nyi%20u.%204%2C%201077!5e0!3m2!1shu!2shu!4v1659009074305!5m2!1shu!2shu"
+                    frameborder="0" allowfullscreen></iframe>
+                <p>Európa Tréning Kft.</p>
+                <p>1077 Budapest, Wesselényi utca 4. 4. em. 23.</p>
+                <p>+36 1 411-0640</p>
+                <p>europatrening@europatrening.hu</p>
+            </div>
+            <div class="col-lg-2">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Név:" required>
+
+
+                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail cím:" required>
+
+
+                    <div class="form-group mt-3">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Tárgy"
+                            required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Üzenet" required></textarea>
+                    </div>
+
+                    <div class="text-center"><button type="submit">Küldés</button></div>
+                </form>
+
+            </div>
+            <div class="col-lg-3"></div>
+
+        </div>
+    </div>
+
+    <!-- End Contact -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
