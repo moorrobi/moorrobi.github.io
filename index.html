@@ -68,10 +68,29 @@
                                 <a class="nav-link" href="#">Kapcsolat</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <form class="d-flex" role="search" id="form">
+                            <input class="form-control me-2" type="search" id="query" name="q" placeholder="Search"
+                                aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
+                        <!-- jscript -->
+                        <script>
+                            const f = document.getElementById('form');
+                            const q = document.getElementById('query');
+                            const google = 'https://www.google.com/search?q=site%3A+';
+                            const site = 'moorrobi.github.io';
+
+                            function submitted(event) {
+                                event.preventDefault();
+                                const url = google + site + '+' + q.value;
+                                const win = window.open(url, '_blank');
+                                win.focus();
+                            }
+
+                            f.addEventListener('submit', submitted);
+                        </script>
+
+                        <!-- End jscript -->
                     </div>
                 </div>
                 <div class="col-lg-2"></div>
@@ -91,7 +110,7 @@
             <div class="container text-center" style="padding-top: 200px;">
                 <div class="row">
                     <div class="col-lg-3 col-md-2">
-                        Column
+
                     </div>
                     <div class="col-lg-2 col-md-2">
                         <div class="card text-bg-dark" style="height: 300px; margin: 0%;">
@@ -151,7 +170,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        Column
+
                     </div>
                 </div>
             </div>
@@ -163,10 +182,10 @@
 
     <div class="container text-center" style="padding-top: 50px; background-color: #9c1418;">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-3">
                 Column
             </div>
-            <div class="col-lg-6">
+            <div class="col-6">
                 <h2 style="color: white; font-size: 28pt;">
                     RÓLUNK
                 </h2>>
@@ -192,7 +211,7 @@
                     vezetőik számára.
                 </p>
             </div>
-            <div class="col-lg-3">
+            <div class="col-3">
                 Column
             </div>
         </div>
@@ -205,7 +224,7 @@
         style="padding-top: 30px; padding-bottom: 30px; background-color: rgba(0,0,0,0.7);">
         <div class="row">
             <div class="col-lg-3">
-                Column
+
             </div>
             <div class="col-lg-6">
                 <h2 style="color: white; font-size: 28pt;">
@@ -252,12 +271,12 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                Column
+
             </div>
         </div>
         <div class="row">
             <div class="col-lg-3">
-                Column
+
             </div>
             <div class="col-lg-6">
 
@@ -303,7 +322,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                Column
+
             </div>
         </div>
     </div>
@@ -313,9 +332,9 @@
     <div class="container text-center"
         style="padding-top: 30px; padding-bottom: 30px; background-color: rgba(0,0,0,0.3);">
         <div class="row">
-            <div class="col-lg-3"></div>
+            <div class="col-lg-2"></div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <h2 style="color: black; font-size: 28pt;">
                     RÓLUNK MONDTÁK
                 </h2>>
@@ -327,8 +346,19 @@
                             aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                            aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" style="padding-left: 50px; padding-right: 50px;">
+                        <!-- 123 -->
                         <div class="carousel-item active">
                             <div class="row row-cols-1 row-cols-md-3 g-4">
                                 <div class="col">
@@ -399,6 +429,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 234 -->
                         <div class="carousel-item">
                             <div class="row row-cols-1 row-cols-md-3 g-4">
                                 <div class="col">
@@ -468,6 +499,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 345 -->
                         <div class="carousel-item">
                             <div class="row row-cols-1 row-cols-md-3 g-4">
                                 <div class="col">
@@ -529,6 +561,324 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 456 -->
+                        <div class="carousel-item">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            A kollégák a felmérések eredményét hitelesnek, az azzal kapcsolatos
+                                            visszajelzést és kiértékelést
+                                            hasznosnak és a mindennapi életbe beilleszthetőnek értékelték. Az elvégzett
+                                            munka eredményeképp jobban
+                                            felkészültnek, tudatosabbnak érzem a szervezet vezetőit a kellemetlen
+                                            problémák és mindennapi
+                                            konfliktusok kezelésére.
+                                        </p>
+                                        <p style="text-align: left;">Lukács-Szalkay Petra</p>
+                                        <p style="text-align: left; font-size: 9pt;">ügyvezető igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">MKB Nyugdíjpénztár</p>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="background-color: #9c1418; padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify; color: white;">
+                                            A vezetőképző program során elkötelezett és magas szakmai színvonalú
+                                            trénerek munkája következtében
+                                            sikeres és eredményes fejlesztés valósult meg. A program hatékonysága
+                                            egyaránt tapasztalható szervezeti
+                                            szinten és az egyéni fejlesztési célok tekintetében is.
+                                        </p>
+                                        <p style="text-align: left; color: white;">dr. Barna Tímea</p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">igazgató
+                                        </p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">NÉBIH
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            A tréning sikerességét a kollégák lelkes részvétele és a tanult ismeretek
+                                            sikeres és hatékony gyakorlati
+                                            alkalmazása, a tolerancia és a kommunikációs szint érezhető emelkedése és
+                                            nem utolsó sorban a fluktuáció
+                                            csökkenése bizonyítja.
+                                        </p>
+                                        <p style="text-align: left;">Gódor Sándor</p>
+                                        <p style="text-align: left; font-size: 9pt;">adminisztrációs igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">Stanley Electric Hungary Kft.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 567 -->
+
+                        <div class="carousel-item">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            A vezetőképző program során elkötelezett és magas szakmai színvonalú
+                                            trénerek munkája következtében
+                                            sikeres és eredményes fejlesztés valósult meg. A program hatékonysága
+                                            egyaránt tapasztalható szervezeti
+                                            szinten és az egyéni fejlesztési célok tekintetében is.
+                                        </p>
+                                        <p style="text-align: left;">dr. Barna Tímea</p>
+                                        <p style="text-align: left; font-size: 9pt;">igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">NÉBIH</p>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="background-color: #9c1418; padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify; color: white;">
+                                            A tréning sikerességét a kollégák lelkes részvétele és a tanult ismeretek
+                                            sikeres és hatékony gyakorlati
+                                            alkalmazása, a tolerancia és a kommunikációs szint érezhető emelkedése és
+                                            nem utolsó sorban a fluktuáció
+                                            csökkenése bizonyítja.
+                                        </p>
+                                        <p style="text-align: left; color: white;">Gódor Sándor</p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">adminisztrációs
+                                            igazgató
+                                        </p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">Stanley Electric
+                                            Hungary Kft.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            A fejlesztést gondos előkészítőmunka előzte meg. A helyzetfeltáró interjúkat
+                                            és workshopokat tapasztalt,
+                                            szakmailag felkészült trénerek tartották, akik oldott hangulatot teremtettek
+                                            a közös munka során. Ennek
+                                            köszönhetően ügyfélszolgálatunk igényét maximálisan figyelembe vevő
+                                            tréninget kaptunk. A kollégák
+                                            megismerték a hatékony kommunikációt, az asszertivitást, az ügyféltípusokat.
+                                            Az utánkövetések alkalmával
+                                            a résztvevők elmélyítették a tréningen tanultakat, valamint új technikákat
+                                            sajátítottak el a
+                                            stresszkezelés, a konfliktushelyzetek megoldási technikái és az
+                                            időgazdálkodás területén. Kollegáink
+                                            szakmailag és emberileg is fejlődtek a program során.
+                                        </p>
+                                        <p style="text-align: left;">Ficsor Elza</p>
+                                        <p style="text-align: left; font-size: 9pt;">stratégiai igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">Nemzeti Hulladékgazdálkodási
+                                            Szolgáltató Kft.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 678 -->
+
+                        <div class="carousel-item">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            A tréning sikerességét a kollégák lelkes részvétele és a tanult ismeretek
+                                            sikeres és hatékony gyakorlati
+                                            alkalmazása, a tolerancia és a kommunikációs szint érezhető emelkedése és
+                                            nem utolsó sorban a fluktuáció
+                                            csökkenése bizonyítja.
+                                        </p>
+                                        <p style="text-align: left;">Gódor Sándor</p>
+                                        <p style="text-align: left; font-size: 9pt;">adminisztrációs igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">Stanley Electric Hungary Kft.</p>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="background-color: #9c1418; padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify; color: white;">
+                                            A fejlesztést gondos előkészítőmunka előzte meg. A helyzetfeltáró interjúkat
+                                            és workshopokat tapasztalt,
+                                            szakmailag felkészült trénerek tartották, akik oldott hangulatot teremtettek
+                                            a közös munka során. Ennek
+                                            köszönhetően ügyfélszolgálatunk igényét maximálisan figyelembe vevő
+                                            tréninget kaptunk. A kollégák
+                                            megismerték a hatékony kommunikációt, az asszertivitást, az ügyféltípusokat.
+                                            Az utánkövetések alkalmával
+                                            a résztvevők elmélyítették a tréningen tanultakat, valamint új technikákat
+                                            sajátítottak el a
+                                            stresszkezelés, a konfliktushelyzetek megoldási technikái és az
+                                            időgazdálkodás területén. Kollegáink
+                                            szakmailag és emberileg is fejlődtek a program során.
+                                        </p>
+                                        <p style="text-align: left; color: white;">Ficsor Elza</p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">stratégiai igazgató
+                                        </p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">Nemzeti
+                                            Hulladékgazdálkodási Szolgáltató Kft.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            A kollégák nagyon hasznosnak és konstruktívnak találták a tesztek alapján
+                                            történt visszajelzéseket. Az
+                                            fejlesztési célok elérésében az Európa Tréning munkatársaiban kiváló
+                                            partnerre találtunk, akik
+                                            maximálisan támogatják fejlesztési elképzeléseinket. Eddigi pozitív
+                                            tapasztalataink szerint más
+                                            vállalatok számára is ajánljuk az Európa Tréning céggel való együttműködést.
+                                        </p>
+                                        <p style="text-align: left;">Kiss Csaba</p>
+                                        <p style="text-align: left; font-size: 9pt;">HR igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">Porsche Hungaria</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 781 -->
+
+                        <div class="carousel-item">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            A fejlesztést gondos előkészítőmunka előzte meg. A helyzetfeltáró interjúkat
+                                            és workshopokat tapasztalt,
+                                            szakmailag felkészült trénerek tartották, akik oldott hangulatot teremtettek
+                                            a közös munka során. Ennek
+                                            köszönhetően ügyfélszolgálatunk igényét maximálisan figyelembe vevő
+                                            tréninget kaptunk. A kollégák
+                                            megismerték a hatékony kommunikációt, az asszertivitást, az ügyféltípusokat.
+                                            Az utánkövetések alkalmával
+                                            a résztvevők elmélyítették a tréningen tanultakat, valamint új technikákat
+                                            sajátítottak el a
+                                            stresszkezelés, a konfliktushelyzetek megoldási technikái és az
+                                            időgazdálkodás területén. Kollegáink
+                                            szakmailag és emberileg is fejlődtek a program során.
+                                        </p>
+                                        <p style="text-align: left;">Ficsor Elza</p>
+                                        <p style="text-align: left; font-size: 9pt;">stratégiai igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">Nemzeti Hulladékgazdálkodási
+                                            Szolgáltató Kft.</p>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="background-color: #9c1418; padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify; color: white;">
+                                            A kollégák nagyon hasznosnak és konstruktívnak találták a tesztek alapján
+                                            történt visszajelzéseket. Az
+                                            fejlesztési célok elérésében az Európa Tréning munkatársaiban kiváló
+                                            partnerre találtunk, akik
+                                            maximálisan támogatják fejlesztési elképzeléseinket. Eddigi pozitív
+                                            tapasztalataink szerint más
+                                            vállalatok számára is ajánljuk az Európa Tréning céggel való együttműködést.
+                                        </p>
+                                        <p style="text-align: left; color: white;">Kiss Csaba</p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">HR igazgató
+                                        </p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">Porsche Hungaria
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            Az Európa Tréning Szervezetfejlesztő és Tanácsadó Kft. vezetői
+                                            kompetencia-diagnózisa és fejlesztési
+                                            programja lehetővé tette a vállalatvezetés számára a célzott vezetői kör
+                                            kompetenciáinak objektív
+                                            felmérését, megismerését, fejlesztési pontok meghatározását. Jó
+                                            tapasztalataink alapján ajánljuk az
+                                            Európa Tréning Kft-t vezetői kompetencia-diagnózis és fejlesztési program
+                                            területen komplex szakértői,
+                                            tanácsadói tevékenység ellátására.
+                                        </p>
+                                        <p style="text-align: left;">Tóth István</p>
+                                        <p style="text-align: left; font-size: 9pt;">vezérigazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">Nyírségvíz</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 812 -->
+
+                        <div class="carousel-item">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            A kollégák nagyon hasznosnak és konstruktívnak találták a tesztek alapján
+                                            történt visszajelzéseket. Az
+                                            fejlesztési célok elérésében az Európa Tréning munkatársaiban kiváló
+                                            partnerre találtunk, akik
+                                            maximálisan támogatják fejlesztési elképzeléseinket. Eddigi pozitív
+                                            tapasztalataink szerint más
+                                            vállalatok számára is ajánljuk az Európa Tréning céggel való együttműködést.
+                                        </p>
+                                        <p style="text-align: left;">Kiss Csaba</p>
+                                        <p style="text-align: left; font-size: 9pt;">HR igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">Porsche Hungaria</p>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="background-color: #9c1418; padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify; color: white;">
+                                            Az Európa Tréning Szervezetfejlesztő és Tanácsadó Kft. vezetői
+                                            kompetencia-diagnózisa és fejlesztési
+                                            programja lehetővé tette a vállalatvezetés számára a célzott vezetői kör
+                                            kompetenciáinak objektív
+                                            felmérését, megismerését, fejlesztési pontok meghatározását. Jó
+                                            tapasztalataink alapján ajánljuk az
+                                            Európa Tréning Kft-t vezetői kompetencia-diagnózis és fejlesztési program
+                                            területen komplex szakértői,
+                                            tanácsadói tevékenység ellátására.
+                                        </p>
+                                        <p style="text-align: left; color: white;">Tóth István</p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">vezérigazgató
+                                        </p>
+                                        <p style="text-align: left; font-size: 9pt; color: white;">Nyírségvíz
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100" style="padding: 10px;">
+                                        <p style="font-size: 9pt; text-align: justify;">
+                                            Az Európa Tréning Kft. kollégái minden közös projektünk alkalmával,
+                                            maximális szakértelemmel, precíz
+                                            dokumentációs fegyelemmel, partnerorientált hozzáállással támogatják a
+                                            programok sikerességét. A
+                                            programok minden esetben jól szervezetten, jó hangulatban, egy gondosan
+                                            felépített szakmai előkészítés
+                                            és irányítás mellett zajlottak. Az Európa Tréning Kft. egy olyan megbízható,
+                                            rugalmas, szakmailag
+                                            magasan kvalifikált szakértői csapat, akit szívesen ajánlok minden olyan
+                                            cégvezető/ HR vezető
+                                            figyelmébe, aki számára fontos érték a munkavállalók fejlődése, a
+                                            csapatszellem és összetartás
+                                            kialakítása!
+                                        </p>
+                                        <p style="text-align: left;">Gulácsi Éva</p>
+                                        <p style="text-align: left; font-size: 9pt;">személyzeti igazgató</p>
+                                        <p style="text-align: left; font-size: 9pt;">Szuro-Trade Kft.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End carusel-->
+
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="prev">
@@ -543,7 +893,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3"></div>
+            <div class="col-lg-2"></div>
 
         </div>
 
@@ -616,19 +966,21 @@
                 <iframe style="border:0; width: 100%; height: 270px;"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.6591946227677!2d19.057898715818055!3d47.49655220356657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc4267290903%3A0xbeb463ab7628bd4b!2sBudapest%2C%20Wessel%C3%A9nyi%20u.%204%2C%201077!5e0!3m2!1shu!2shu!4v1659009074305!5m2!1shu!2shu"
                     frameborder="0" allowfullscreen></iframe>
-                <p>Európa Tréning Kft.</p>
+                <h4>Európa Tréning Kft.</h4>
                 <p>1077 Budapest, Wesselényi utca 4. 4. em. 23.</p>
                 <p>+36 1 411-0640</p>
                 <p>europatrening@europatrening.hu</p>
             </div>
-            <div class="col-lg-2">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Név:" required>
-
-
-                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail cím:" required>
-
+            <div class="col-lg-3">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form"
+                    style="background-color: white; padding: 20px;">
+                    <div class="form-group mt-3">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Név:" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="E-mail cím:"
+                            required>
+                    </div>
 
                     <div class="form-group mt-3">
                         <input type="text" class="form-control" name="subject" id="subject" placeholder="Tárgy"
@@ -642,7 +994,7 @@
                 </form>
 
             </div>
-            <div class="col-lg-3"></div>
+            <div class="col-lg-2"></div>
 
         </div>
     </div>
