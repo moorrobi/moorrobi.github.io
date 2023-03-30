@@ -8,184 +8,218 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-3">
-                    <a href="./index.html" class="logo"><img src="./img/fejlec.jpg" alt="" class="img-fluid"></a>
-                    <p style="font-size: 10pt;">Európa Tréning Szervezetfejlesztő és Tanácsadó Kft.</p>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="col-lg-5">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Rólunk
-                                </a>
-                                <ul class="dropdown-menu" style="background-color: #9c1418;">
-                                    <li><a class="dropdown-item" href="./index.html#about"
-                                            style="color: white;">Cégismertető</a></li>
-                                    <li><a class=" dropdown-item" href="./index.html#team" style="color: white;">
-                                            Szakértőink</a></li>
-
-                                    <li><a class=" dropdown-item" href="./index.html#testimonials"
-                                            style="color: white;">
-                                            Rólunk mondták</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Szolgáltatások
-                                </a>
-                                <ul class="dropdown-menu" style="background-color: #9c1418;">
-                                    <li><a class="dropdown-item" href="./diagnostic_services.html"
-                                            style="color: white;">Diagnosztika</a></li>
-                                    <li><a class="dropdown-item" href="./od_services.html"
-                                            style="color: white;">Szervezetfejlesztés</a></li>
-
-                                    <li><a class="dropdown-item" href="./human_services.html"
-                                            style="color: white;">Humánfejlesztés</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Referenciák</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Kapcsolat</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex" role="search" id="form">
-                            <input class="form-control me-2" type="search" id="query" name="q" placeholder="Search"
-                                aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                        <!-- jscript -->
-                        <script>
-                            const f = document.getElementById('form');
-                            const q = document.getElementById('query');
-                            const google = 'https://www.google.com/search?q=site%3A+';
-                            const site = 'moorrobi.github.io';
-
-                            function submitted(event) {
-                                event.preventDefault();
-                                const url = google + site + '+' + q.value;
-                                const win = window.open(url, '_blank');
-                                win.focus();
-                            }
-
-                            f.addEventListener('submit', submitted);
-                        </script>
-
-                        <!-- End jscript -->
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-3">
+                        <a href="./index.html" class="logo"><img src="./img/fejlec.jpg" alt="" class="img-fluid"></a>
+                        <p style="font-size: 10pt;">Európa Tréning Szervezetfejlesztő és Tanácsadó Kft.</p>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
+                    <div class="col-lg-5">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Rólunk
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: #9c1418;">
+                                        <li><a class="dropdown-item" href="./index.html#about"
+                                                style="color: white;">Cégismertető</a></li>
+                                        <li><a class=" dropdown-item" href="./index.html#team" style="color: white;">
+                                                Szakértőink</a></li>
+
+                                        <li><a class=" dropdown-item" href="./index.html#testimonials"
+                                                style="color: white;">
+                                                Rólunk mondták</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Szolgáltatások
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: #9c1418;">
+                                        <li><a class="dropdown-item" href="./diagnostic_services.html"
+                                                style="color: white;">Diagnosztika</a></li>
+                                        <li><a class="dropdown-item" href="./od_services.html"
+                                                style="color: white;">Szervezetfejlesztés</a></li>
+
+                                        <li><a class="dropdown-item" href="./human_services.html"
+                                                style="color: white;">Humánfejlesztés</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Referenciák</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Kapcsolat</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search" id="form">
+                                <input class="form-control me-2" type="search" id="query" name="q" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                            <!-- jscript -->
+                            <script>
+                                const f = document.getElementById('form');
+                                const q = document.getElementById('query');
+                                const google = 'https://www.google.com/search?q=site%3A+';
+                                const site = 'moorrobi.github.io';
+
+                                function submitted(event) {
+                                    event.preventDefault();
+                                    const url = google + site + '+' + q.value;
+                                    const win = window.open(url, '_blank');
+                                    win.focus();
+                                }
+
+                                f.addEventListener('submit', submitted);
+                            </script>
+
+                            <!-- End jscript -->
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+
                 </div>
-                <div class="col-lg-2"></div>
 
             </div>
-
-        </div>
-    </nav>
-
+        </nav>
+    </header>
     <!-- End Navbar-->
 
     <!-- Szolgaltatasok-->
 
-    <div class="card text-bg-dark">
-        <img src="./img/nyitokep1.png" class="card-img" alt="...">
-        <div class="card-img-overlay">
-            <div class="container text-center" style="padding-top: 200px;">
-                <div class="row">
-                    <div class="col-lg-3 col-md-2">
-
-                    </div>
-                    <div class="col-lg-2 col-md-2">
-                        <div class="card text-bg-dark" style="height: 300px; margin: 0%;">
-                            <img src="./img/boxok.png" class="card-img-fluid" alt="...">
-                            <div class="card-img-overlay">
-                                <img src="./img/diagnosztika1.png" width="60px" style="margin: 0%;">
-                                <p style="color: black; font-weight: bold; margin-bottom: 40px; font-size: small;">
-                                    DIAGNOSZTIKA</p>
-                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">Vezetői
-                                    diagnosztika</p>
-                                <i class="bi bi-caret-down-fill" style="color: #9c1418;;"></i>
-                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">Ügyfél
-                                    diagnosztika</p>
-                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
-                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">
-                                    Megfigyelési szempontrendszer</p>
-                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2">
-                        <div class="card text-bg-dark">
-                            <img src="./img/boxok.png" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <img src="./img/szervezetfejlesztes2.png" width="60px" style="margin: 0%;">
-                                <p style="color: black; font-weight: bold; margin-bottom: 40px; font-size: small;">
-                                    SZERVEZETFEJLESZTÉS</p>
-                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">
-                                    Szervezettervezés</p>
-                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
-                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">
-                                    Szervezet korszerűsítés</p>
-                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
-                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">
-                                    Folyamatmenedzsment</p>
-                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2">
-                        <div class="card text-bg-dark">
-                            <img src="./img/boxok.png" class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <img src="./img/humanfejlesztes2.png" width="60px" style="margin: 0%;">
-                                <p style="color: black; font-weight: bold; margin-bottom: 40px; font-size: small;">
-                                    HUMÁNFEJLESZTÉS</p>
-                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">Workshop
-                                </p>
-                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
-                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">Tréning
-                                </p>
-                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
-                                <p style="margin-bottom: 0%; color: #000; font-size: small; font-weight: bold;">
-                                    Coaching</p>
-                                <i class="bi bi-caret-down-fill" style="color: #9c1418;"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-
-                    </div>
-                </div>
+    <div class="container-fluid img-fluid"
+        style="background-image: url(./img/nyitokep.png); background-repeat: no-repeat; background-size: 100% 100%;">
+        <div class="row" style="padding-top: 30%; padding-bottom: 5%;">
+            <div class="col-lg-2 col-md-2"></div>
+            <div class="col-lg-2 col-md-2"
+                style="background-image: url(./img/boxok.png); background-size: cover; margin-left: 2%; margin-right: 2%; border-radius: 10px;">
+                <ul class="nav flex-column" style="text-align: center;">
+                    <li class="nav-item" style="text-align: center;">
+                        <img src="./img/diagnosztika1.png" width="40%" class="img-fluid">
+                    </li>
+                    <li class="nav-item" style="font-size: 16pt; font-weight: 700;">
+                        DIAGNOSZTIKA
+                    </li>
+                    <li class="nav-item" style="padding-top: 30%;">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <p style="font-family: 'Raleway' Medium; font-size: 16pt; color: #000; margin: 0%;">
+                                Vezetői diagnosztika</p>
+                            <p style="margin: 0%;"><i class="bi bi-caret-down-fill" style="color: #9c1418;"></i></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <p style="font-family: 'Raleway' Medium; font-size: 16pt; color: #000; margin: 0%;">
+                                Ügyfél diagnosztika</p>
+                            <p style="margin: 0%;"><i class="bi bi-caret-down-fill" style="color: #9c1418;"></i></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <p style="font-family: 'Raleway' Medium; font-size: 16pt; color: #000; margin: 0%;">
+                                Megfigyelési szempontrendszer</p>
+                            <p style="margin: 0%;"><i class="bi bi-caret-down-fill" style="color: #9c1418;"></i></p>
+                        </a>
+                    </li>
+                </ul>
             </div>
+            <div class="col-lg-2 col-md-2"
+                style="background-image: url(./img/boxok.png); background-size: cover; margin-left: 2%; margin-right: 2%; border-radius: 10px;">
+                <ul class="nav flex-column" style="text-align: center;">
+                    <li class="nav-item" style="text-align: center;">
+                        <img src="./img/diagnosztika1.png" width="40%" class="img-fluid">
+                    </li>
+                    <li class="nav-item" style="font-size: 16pt; font-weight: 700;">
+                        DIAGNOSZTIKA
+                    </li>
+                    <li class="nav-item" style="padding-top: 30%;">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <p style="font-family: 'Raleway' Medium; font-size: 16pt; color: #000; margin: 0%;">
+                                Vezetői diagnosztika</p>
+                            <p style="margin: 0%;"><i class="bi bi-caret-down-fill" style="color: #9c1418;"></i></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <p style="font-family: 'Raleway' Medium; font-size: 16pt; color: #000; margin: 0%;">
+                                Ügyfél diagnosztika</p>
+                            <p style="margin: 0%;"><i class="bi bi-caret-down-fill" style="color: #9c1418;"></i></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <p style="font-family: 'Raleway' Medium; font-size: 16pt; color: #000; margin: 0%;">
+                                Megfigyelési szempontrendszer</p>
+                            <p style="margin: 0%;"><i class="bi bi-caret-down-fill" style="color: #9c1418;"></i></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-2"
+                style="background-image: url(./img/boxok.png); background-size: cover; margin-left: 2%; margin-right: 2%; border-radius: 10px;">
+                <ul class="nav flex-column" style="text-align: center;">
+                    <li class="nav-item" style="text-align: center;">
+                        <img src="./img/diagnosztika1.png" width="40%" class="img-fluid">
+                    </li>
+                    <li class="nav-item" style="font-size: 16pt; font-weight: 700;">
+                        DIAGNOSZTIKA
+                    </li>
+                    <li class="nav-item" style="padding-top: 30%;">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <p style="font-family: 'Raleway' Medium; font-size: 16pt; color: #000; margin: 0%;">
+                                Vezetői diagnosztika</p>
+                            <p style="margin: 0%;"><i class="bi bi-caret-down-fill" style="color: #9c1418;"></i></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <p style="font-family: 'Raleway' Medium; font-size: 16pt; color: #000; margin: 0%;">
+                                Ügyfél diagnosztika</p>
+                            <p style="margin: 0%;"><i class="bi bi-caret-down-fill" style="color: #9c1418;"></i></p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <p style="font-family: 'Raleway' Medium; font-size: 16pt; color: #000; margin: 0%;">
+                                Megfigyelési szempontrendszer</p>
+                            <p style="margin: 0%;"><i class="bi bi-caret-down-fill" style="color: #9c1418;"></i></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-2"></div>
         </div>
     </div>
+
     <!-- End Szolgaltatasok-->
 
     <!-- About-->
 
     <div class="container text-center" style="padding-top: 50px; background-color: #9c1418;">
         <div class="row">
-            <div class="col-3">
-                Column
-            </div>
-            <div class="col-6">
+            <div class="col-2"></div>
+            <div class="col-8">
                 <h2 style="color: white; font-size: 28pt;">
                     RÓLUNK
                 </h2>>
@@ -211,9 +245,7 @@
                     vezetőik számára.
                 </p>
             </div>
-            <div class="col-3">
-                Column
-            </div>
+            <div class="col-2"></div>
         </div>
     </div>
 
@@ -223,15 +255,15 @@
     <div class="container text-center"
         style="padding-top: 30px; padding-bottom: 30px; background-color: rgba(0,0,0,0.7);">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-2">
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <h2 style="color: white; font-size: 28pt;">
                     MUNKATÁRSAINK
                 </h2>>
                 <div class="card-group">
-                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                    <div class="card" style="background-color: rgba(0,0,0,0); border-style: hidden; margin: 1%;">
                         <img src="./img/11zon_cropped.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="color: white; font-size: 12pt;">DR. DURUGY ANDRÁS</h5>
@@ -239,21 +271,21 @@
 
                         </div>
                     </div>
-                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                    <div class="card" style="background-color: rgba(0,0,0,0); border-style: hidden; margin: 1%;">
                         <img src="./img/11zon_cropped (1).png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="color: white; font-size: 12pt;">KÉZELI KRISZTINA</h5>
                             <p class="card-text" style="color: white; font-size: 8pt;">pénzügyi vezető</p>
                         </div>
                     </div>
-                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                    <div class="card" style="background-color: rgba(0,0,0,0); border-style: hidden; margin: 1%;">
                         <img src="./img/11zon_cropped (1).png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="color: white; font-size: 12pt;">VÁGVÖLGYI JULIANNA</h5>
                             <p class="card-text" style="color: white; font-size: 8pt;">szervezetfejlesztési szakértő</p>
                         </div>
                     </div>
-                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                    <div class="card" style="background-color: rgba(0,0,0,0); border-style: hidden; margin: 1%;">
                         <img src="./img/11zon_cropped.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="color: white; font-size: 12pt;">SUM ISTVÁN</h5>
@@ -261,7 +293,7 @@
 
                         </div>
                     </div>
-                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                    <div class="card" style="background-color: rgba(0,0,0,0); border-style: hidden; margin: 1%;">
                         <img src="./img/11zon_cropped (1).png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="color: white; font-size: 12pt;">HALÁSZ ERIKA</h5>
@@ -270,18 +302,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-2">
 
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-2">
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-8">
 
                 <div class="card-group">
-                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                    <div class="card" style="background-color: rgba(0,0,0,0); border-style: hidden; margin: 1%;">
                         <img src="./img/11zon_cropped.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="color: white; font-size: 12pt;">SCHNEIDER TAMÁS</h5>
@@ -289,21 +321,21 @@
 
                         </div>
                     </div>
-                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                    <div class="card" style="background-color: rgba(0,0,0,0); border-style: hidden; margin: 1%;">
                         <img src="./img/11zon_cropped.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="color: white; font-size: 12pt;">BELINSZKI ZOLTÁN</h5>
                             <p class="card-text" style="color: white; font-size: 8pt;">vezető szakértő, tréner</p>
                         </div>
                     </div>
-                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                    <div class="card" style="background-color: rgba(0,0,0,0); border-style: hidden; margin: 1%;">
                         <img src="./img/11zon_cropped.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="color: white; font-size: 12pt;">SZEKÉR KÁROLY</h5>
                             <p class="card-text" style="color: white; font-size: 8pt;">vezető szakértő, tréner</p>
                         </div>
                     </div>
-                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                    <div class="card" style="background-color: rgba(0,0,0,0); border-style: hidden; margin: 1%;">
                         <img src="./img/11zon_cropped (1).png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="color: white; font-size: 12pt;">DURUGY ANNA</h5>
@@ -312,7 +344,7 @@
 
                         </div>
                     </div>
-                    <div class="card" style="background-color: rgba(0,0,0,0);">
+                    <div class="card" style="background-color: rgba(0,0,0,0); border-style: hidden; margin: 1%;">
                         <img src="./img/11zon_cropped (1).png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="color: white; font-size: 12pt;">SZABÓ EDINA</h5>
@@ -321,7 +353,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-2">
 
             </div>
         </div>
@@ -958,22 +990,27 @@
     <div class="container text-center"
         style="padding-top: 30px; padding-bottom: 30px; background-color: rgba(0,0,0,0.3);">
         <div class="row">
-            <h2 style="color: black; font-size: 28pt;">
+            <h2 style="color: black; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; padding-bottom: 5%;">
                 VEGYE FEL VELÜNK A KAPCSOLATOT
             </h2>>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-4" style="text-align: left;">
-                <iframe style="border:0; width: 100%; height: 270px;"
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5" style="text-align: left;">
+                <iframe style="border:0; width: 100%; height: 270px; border-radius: 10px;"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.6591946227677!2d19.057898715818055!3d47.49655220356657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc4267290903%3A0xbeb463ab7628bd4b!2sBudapest%2C%20Wessel%C3%A9nyi%20u.%204%2C%201077!5e0!3m2!1shu!2shu!4v1659009074305!5m2!1shu!2shu"
                     frameborder="0" allowfullscreen></iframe>
-                <h4>Európa Tréning Kft.</h4>
-                <p>1077 Budapest, Wesselényi utca 4. 4. em. 23.</p>
-                <p>+36 1 411-0640</p>
-                <p>europatrening@europatrening.hu</p>
+                <h4 style="font-family: 'Raleway', bold; font-size: 20pt; font-weight: 700; padding-top: 5%;">Európa
+                    Tréning Kft.</h4>
+                <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                        class="bi bi-house-door-fill"></i>1077 Budapest, Wesselényi utca 4.
+                    4. em. 23.</p>
+                <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                        class="bi bi-telephone-fill"></i>+36 1 411-0640</p>
+                <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                        class="bi bi-envelope"></i>europatrening@europatrening.hu</p>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <form action="forms/contact.php" method="post" role="form" class="php-email-form"
-                    style="background-color: white; padding: 20px;">
+                    style="background-color: white; padding: 20px; border-radius: 10px; height: 100%;">
                     <div class="form-group mt-3">
                         <input type="text" name="name" class="form-control" id="name" placeholder="Név:" required>
                     </div>
@@ -983,23 +1020,56 @@
                     </div>
 
                     <div class="form-group mt-3">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Tárgy"
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Tárgy:"
                             required>
                     </div>
                     <div class="form-group mt-3">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Üzenet" required></textarea>
+                        <textarea class="form-control" name="message" rows="5" placeholder="Üzenet:"
+                            required></textarea>
                     </div>
 
-                    <div class="text-center"><button type="submit">Küldés</button></div>
+                    <div class="textarea" style="text-align: right;"><button type="submit"
+                            style="color: #9c1418; border-style: hidden;"><i class="bi bi-caret-right-fill"
+                                style="height: 50px;"></i></button></div>
                 </form>
 
             </div>
-            <div class="col-lg-2"></div>
+            <div class="col-lg-1"></div>
 
         </div>
     </div>
 
     <!-- End Contact -->
+
+    <!-- Footer -->
+
+    <div class="container text-center" style="padding-top: 50px; background-color: #9c1418;">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-3">
+                <p style="color: white; text-align: center; padding-left: 0%; padding-right: 0%;">
+                    <i class="bi bi-c-circle"></i>MINDEN JOG FENNTARTVA
+                </p>
+            </div>
+            <div class="col-3">
+                <p style="color: white; text-align: center; margin: 0%;">
+                    ADATKEZELÉSI TÁJÉKOZTATÓ
+                </p>
+            </div>
+            <div class="col-lg-2">
+                <p style="color: white; text-align: center;">
+                    IMPRESSZUM
+                </p>
+            </div>
+            <div class="col-lg-2">
+                <p style="color: white; text-align: center;">
+                    <i class="bi bi-facebook"></i><i class="bi bi-instagram"></i>
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <!-- End Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
