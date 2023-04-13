@@ -1,86 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
 
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Európa Tréning</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* About us */
+        .carousel-inner:first-of-type {
+            padding: 1em;
+        }
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+        .card {
+            margin: 0 0.5em;
+            box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+            border: none;
+        }
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: #e1e1e1;
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+        @media (min-width: 768px) {
+            .carousel-item {
+                margin-right: 0;
+                flex: 0 0 33.333333%;
+                display: block;
+            }
 
-    <!-- =======================================================
-  * Template Name: OnePage - v4.8.1
-  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+            .carousel-inner:first-of-type {
+                display: flex;
+            }
+        }
+
+        .card .img-wrapper {
+            max-width: 100%;
+            height: 13em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card img {
+            max-height: 100%;
+        }
+
+        @media (max-width: 767px) {
+            .card .img-wrapper {
+                height: 17em;
+            }
+        }
+
+        /* End About us*/
+
+        /* Szolgáltatások */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-left: 17%;
+            padding-right: 17%;
+        }
+
+        .flex-item-left {
+            flex: 20%;
+            justify-content: space-around;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        .flex-item-right {
+            flex: 20%;
+            justify-content: space-around;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        /* Responsive layout - makes a one column-layout instead of a two-column layout */
+        @media (max-width: 600px) {
+
+            .flex-container {
+                padding-left: 0%;
+                padding-right: 0%;
+            }
+
+            .flex-item-right,
+            .flex-item-left {
+                flex: 100%;
+            }
+        }
+
+        /* End Szolgáltatások */
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
-
-    <!-- ======= Header ======= -->
+    <!-- Navbar-->
     <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center justify-content-between">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-3">
+                        <a href="./index.html" class="logo"><img src="./img/fejlec.jpg" alt="" class="img-fluid"></a>
+                        <p style="font-size: 10pt;">Európa Tréning Szervezetfejlesztő és Tanácsadó Kft.</p>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Rólunk
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: #9c1418;">
+                                        <li><a class="dropdown-item" href="./index.html#about"
+                                                style="color: white;">Cégismertető</a></li>
+                                        <li><a class=" dropdown-item" href="./index.html#team" style="color: white;">
+                                                Szakértőink</a></li>
 
-            <a href="./index.html" class="logo"><img src="./img/fejlec.jpg" alt="" class="img-fluid"></a>
+                                        <li><a class=" dropdown-item" href="./index.html#testimonials"
+                                                style="color: white;">
+                                                Rólunk mondták</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Szolgáltatások
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: #9c1418;">
+                                        <li><a class="dropdown-item" href="./diagnostic_services.html"
+                                                style="color: white;">Diagnosztika</a></li>
+                                        <li><a class="dropdown-item" href="./od_services.html"
+                                                style="color: white;">Szervezetfejlesztés</a></li>
 
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li class="dropdown"><a href="#"><span>Szolgáltatások</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="./diagnostic_services.html">Diagnosztika</a></li>
-                            <li><a href="./od_services.html">Szervezetfejlesztés</a></li>
-                            <li><a href="./human_services.html">Humánfejlesztés</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#"><span>Rólunk</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="./index.html#about">Cégismertető</a></li>
-                            <li><a href="./index.html#team">Szakértőink</a></li>
-                            <li><a href="./index.html#testimonials">Rólunk mondták</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link scrollto" href="./index.html#contact">Kapcsolat</a></li>
-                    <li><a class="nav-link scrollto o" href="./index.html#ref">Referenciák</a></li>
-                </ul>
+                                        <li><a class="dropdown-item" href="./human_services.html"
+                                                style="color: white;">Humánfejlesztés</a></li>
+                                    </ul>
+                                </li>
 
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-        </div>
-        <div class="container d-flex align-items-center justify-content-between">
-            <a class="navbar-brand">Európa Tréning Szervezetfejlesztő és Tanácsadó Kft.</a>
-            <nav class="navbar bg-light">
-                <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Referenciák</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Kapcsolat</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search" id="form">
+                                <input class="form-control me-2" type="search" id="query" name="q" placeholder=""
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit"><i
+                                        class="bi bi-search"></i></button>
+                            </form>
+                            <!-- jscript -->
+                            <script>
+                                const f = document.getElementById('form');
+                                const q = document.getElementById('query');
+                                const google = 'https://www.google.com/search?q=site%3A+';
+                                const site = 'http://www.europatrening.hu/index.php';
+
+                                function submitted(event) {
+                                    event.preventDefault();
+                                    const url = google + site + '+' + q.value;
+                                    const win = window.open(url, '_blank');
+                                    win.focus();
+                                }
+
+                                f.addEventListener('submit', submitted);
+                            </script>
+
+                            <!-- End jscript -->
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+
                 </div>
-            </nav>
-        </div>
-    </header><!-- End Header -->
+
+            </div>
+        </nav>
+    </header>
+    <!-- End Navbar-->
 
     <div class="container text-center">
         <div class="row">
@@ -100,7 +220,7 @@
         <div class="container bg-light text-dark">
             <div class="row my-5">
                 <div class="col">
-                    <iframe src="./assets/pdf/Vezetoi_diagnozis_Europa_Trening.pdf" width="100%" height="1000px">
+                    <iframe src="./pdf/Vezetoi_diagnozis_Europa_Trening.pdf" width="100%" height="1000px">
                     </iframe>
                 </div>
             </div>
@@ -112,7 +232,7 @@
         <div class="container bg-light text-dark">
             <div class="row my-5">
                 <div class="col">
-                    <iframe src="./assets/pdf/Ugyfelszolgalati_diagnozis_Europa_Trening.pdf" width="100%"
+                    <iframe src="./pdf/Ugyfelszolgalati_diagnozis_Europa_Trening.pdf" width="100%"
                         height="1000px">
                     </iframe>
                 </div>
@@ -125,7 +245,7 @@
         <div class="container bg-light text-dark">
             <div class="row my-5">
                 <div class="col">
-                    <iframe src="./assets/pdf/Kompetencia_vizsgalat_es_ Fejleszto_Konzultacio_Europa_Trening.pdf"
+                    <iframe src="./pdf/Kompetencia_vizsgalat_es_Fejleszto_Konzultacio_Europa_Trening.pdf"
                         width="100%" height="1000px">
                     </iframe>
                 </div>
@@ -135,157 +255,144 @@
 
         </div>
     </section><!-- End Megfigyelési szempontrendszer Section -->
+    
+    
 
-    <!-- ======= Szervezetfejlesztés, korszerűsítés Section ======= -->
-    <section id="szervfejl" class="about">
-        <div class="container" data-aos="fade-up">
+                <!-- Contact -->
 
-            <div class="section-title">
-                <h2>Szervezetfejlesztés, korszerűsítés</h2>
-                <p>Az Európa Tréning Szervezetfejlesztő és Tanácsadó Kft. 1999-ben jött létre, célul tűzve ki egy új,
-                    professzionális
-                    vállalati képzési partner megjelenését a magyar tréningpiacon. </p>
-            </div>
-
-            <div class="row content">
-                <div class="col-lg-6">
-                    <p>
-                        Az alapítók szakmai múltja megfelelő háttérként szolgált ahhoz, hogy vállalatunk rövid időn
-                        belül ismert
-                        és elismert tréningszolgáltatóvá váljék. Az Európa Tréning jelenleg Magyarország vezető
-                        tréningcégei közé
-                        tartozik.
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line"></i> "ET minőségmenedzsment modell"</li>
-                        <li><i class="ri-check-double-line"></i> Tevékenységünk kiterjed mind a versenyszféra, mind a
-                            közigazgatás
-                            területeire</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0">
-                    <p>
-                        A nemzetközi és hazai gyakorlatban bevált, korszerű mérési eszközöket, sikeres módszertanokat és
-                        rugalmasan alkalmazható megoldásokat nyújt a szervezeti- és az emberi célok harmonikus
-                        megvalósítása
-                        érdekében.
-                    </p>
-                    <a href="https://www.captain.hu/" class="btn-learn-more" target="_blank">Stratégiai partnerünk a
-                        Captain
-                        Hungary Kft.</a>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End Szervezet fejlesztés, korszerűsítés Section -->
-
-    <!-- ======= Humán fejlesztés Section ======= -->
-    <section id="humanfejl" class="about">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Humán fejlesztés</h2>
-                <p>Az Európa Tréning Szervezetfejlesztő és Tanácsadó Kft. 1999-ben jött létre, célul tűzve ki egy új,
-                    professzionális
-                    vállalati képzési partner megjelenését a magyar tréningpiacon. </p>
-            </div>
-
-            <div class="row content">
-                <div class="col-lg-6">
-                    <p>
-                        Az alapítók szakmai múltja megfelelő háttérként szolgált ahhoz, hogy vállalatunk rövid időn
-                        belül ismert
-                        és elismert tréningszolgáltatóvá váljék. Az Európa Tréning jelenleg Magyarország vezető
-                        tréningcégei közé
-                        tartozik.
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line"></i> "ET minőségmenedzsment modell"</li>
-                        <li><i class="ri-check-double-line"></i> Tevékenységünk kiterjed mind a versenyszféra, mind a
-                            közigazgatás
-                            területeire</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0">
-                    <p>
-                        A nemzetközi és hazai gyakorlatban bevált, korszerű mérési eszközöket, sikeres módszertanokat és
-                        rugalmasan alkalmazható megoldásokat nyújt a szervezeti- és az emberi célok harmonikus
-                        megvalósítása
-                        érdekében.
-                    </p>
-                    <a href="https://www.captain.hu/" class="btn-learn-more" target="_blank">Stratégiai partnerünk a
-                        Captain
-                        Hungary Kft.</a>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End Humán fejlesztés Section -->
-
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Európa Tréning Kft.</h3>
-                        <p>
-                            1077 Budapest <br>
-                            Wesselényi utca 4. 4. em. 23.<br>
-                            <br><br>
-
-                        </p>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Menü</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#about">Rólunk</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#contact">Kapcsolat</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#ref">Referenciák</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 footer-newsletter">
-                        <div>
-                            <a href="https://www.facebook.com/profile.php?id=100086475879847" class="facebook"><img
-                                    src="./assets/img/facebook.png" width="70px"></a>
-                            <a href="https://www.instagram.com/europatrening_hu/"><img src="./assets/img/instagram.png"
-                                    width="40px"></a>
+                <div class="container text-center"
+                    style="padding-top: 30px; padding-bottom: 30px; background-image: url(./img/papircsonak.jpg); background-repeat: no-repeat; background-size: 100% 100%; max-width: 100%;">
+                    <div class="row">
+                        <h2
+                            style="color: black; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; padding-bottom: 3%;">
+                            VEGYE FEL VELÜNK A KAPCSOLATOT
+                        </h2>
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-5" style="text-align: left; padding-top: 17px;">
+                            <iframe style="border:0; width: 100%; height: 270px; border-radius: 10px;"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.6591946227677!2d19.057898715818055!3d47.49655220356657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc4267290903%3A0xbeb463ab7628bd4b!2sBudapest%2C%20Wessel%C3%A9nyi%20u.%204%2C%201077!5e0!3m2!1shu!2shu!4v1659009074305!5m2!1shu!2shu"
+                                frameborder="0" allowfullscreen></iframe>
+                            <h4
+                                style="font-family: 'Raleway', bold; font-size: 16pt; font-weight: 700; padding-top: 2%;">
+                                Európa
+                                Tréning Kft.</h4>
+                            <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                                    class="bi bi-house-door-fill"></i>1077 Budapest, Wesselényi utca 4.
+                                4. em. 23.</p>
+                            <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                                    class="bi bi-telephone-fill"></i>+36 1 411-0640</p>
+                            <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                                    class="bi bi-envelope"></i>europatrening@europatrening.hu</p>
                         </div>
+                        <div class="col-lg-4">
+                            <form action="mailto:europatrening@europatrening.hu" method="post" role="form"
+                                enctype="text/plain" class="php-email-form"
+                                style="background-color: transparent; border-radius: 10px; height: 100%; padding: 0%;">
+                                <div class="form-group mt-3" style="padding-top: 0%; border-color: black; border: 2px;">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Név:"
+                                        required style="border: #bbb; border-style: solid;">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="E-mail cím:" required style="border: #bbb; border-style: solid;">
+                                </div>
+
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control" name="subject" id="subject"
+                                        placeholder="Tárgy:" required style="border: #bbb; border-style: solid;">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Üzenet:"
+                                        required style="height: 220px; border: #bbb; border-style: solid;"></textarea>
+                                </div>
+
+                                <div class="textarea" style="text-align: right;"><button type="submit"
+                                        style="color: #9c1418; border-style: hidden; border-radius: 10px;"><i
+                                            class="bi bi-caret-right-fill" style="height: 50px;"></i></button></div>
+                            </form>
+
+                        </div>
+                        <div class="col-lg-1"></div>
+
                     </div>
-                    <div id="preloader" class="col-lg-2"></div>
-                    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-                            class="bi bi-arrow-up-short"></i></a>
                 </div>
-            </div>
-        </div>
 
+                <!-- End Contact -->
 
-    </footer><!-- End Footer -->
+                <!-- Footer -->
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+                <div class="container text-center"
+                    style="padding-top: 50px; padding-bottom: 30px; background-color: #9c1418; max-width: 100%;">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-3">
+                            <p style="color: white; text-align: center; padding-left: 0%; padding-right: 0%;">
+                                <i class="bi bi-c-circle"></i>MINDEN JOG FENNTARTVA
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <p style="color: white; text-align: center; margin: 0%;">
+                                ADATKEZELÉSI TÁJÉKOZTATÓ
+                            </p>
+                        </div>
+                        <div class="col-lg-2">
+                            <p style="color: white; text-align: center;">
+                                IMPRESSZUM
+                            </p>
+                        </div>
+                        <div class="col-lg-2">
+                            <p style="text-align: center; font-size: 28pt; margin: 0%;">
+                                <a href="https://www.facebook.com/profile.php?id=100086475879847"
+                                    style="color: darkgray;"><i class="bi bi-facebook"></i></a>
+                                <a href="https://www.instagram.com/europatrening_hu/" style="color: darkgray;"><i
+                                        class="bi bi-instagram"></i></a>
+                            </p>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                </div>
+                <!-- End Footer -->
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+                <!-- JavaScript -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+                    crossorigin="anonymous"></script>
 
+                <!-- About us -->
+                <script>
+                    var multipleCardCarousel = document.querySelector("#carouselExampleControls");
+                    if (window.matchMedia("(min-width: 768px)").matches) {
+                        var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                            interval: false,
+                        });
+                        var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+                        var cardWidth = $(".carousel-item").width();
+                        var scrollPosition = 0;
+                        $("#carouselExampleControls .carousel-control-next").on("click", function () {
+                            if (scrollPosition < carouselWidth - cardWidth * 4) {
+                                scrollPosition += cardWidth;
+                                $("#carouselExampleControls .carousel-inner").animate(
+                                    { scrollLeft: scrollPosition },
+                                    600
+                                );
+                            }
+                        });
+                        $("#carouselExampleControls .carousel-control-prev").on("click", function () {
+                            if (scrollPosition > 0) {
+                                scrollPosition -= cardWidth;
+                                $("#carouselExampleControls .carousel-inner").animate(
+                                    { scrollLeft: scrollPosition },
+                                    600
+                                );
+                            }
+                        });
+                    } else {
+                        $(multipleCardCarousel).addClass("slide");
+                    }
+                </script>
+                <!-- End About us -->
+
+                <!-- End JavaScript -->
 </body>
 
 </html>

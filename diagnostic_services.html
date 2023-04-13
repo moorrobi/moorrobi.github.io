@@ -1,643 +1,695 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
 
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Európa Tréning</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* About us */
+        .carousel-inner:first-of-type {
+            padding: 1em;
+        }
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+        .card {
+            margin: 0 0.5em;
+            box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+            border: none;
+        }
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: #e1e1e1;
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+        @media (min-width: 768px) {
+            .carousel-item {
+                margin-right: 0;
+                flex: 0 0 33.333333%;
+                display: block;
+            }
 
-    <!-- =======================================================
-  * Template Name: OnePage - v4.8.1
-  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+            .carousel-inner:first-of-type {
+                display: flex;
+            }
+        }
+
+        .card .img-wrapper {
+            max-width: 100%;
+            height: 13em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card img {
+            max-height: 100%;
+        }
+
+        @media (max-width: 767px) {
+            .card .img-wrapper {
+                height: 17em;
+            }
+        }
+
+        /* End About us*/
+
+        /* Szolgáltatások */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-left: 17%;
+            padding-right: 17%;
+        }
+
+        .flex-item-left {
+            flex: 20%;
+            justify-content: space-around;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        .flex-item-right {
+            flex: 20%;
+            justify-content: space-around;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        /* Responsive layout - makes a one column-layout instead of a two-column layout */
+        @media (max-width: 600px) {
+
+            .flex-container {
+                padding-left: 0%;
+                padding-right: 0%;
+            }
+
+            .flex-item-right,
+            .flex-item-left {
+                flex: 100%;
+            }
+        }
+
+        /* End Szolgáltatások */
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
-
-    <!-- ======= Header ======= -->
+    <!-- Navbar-->
     <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center justify-content-between">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-3">
+                        <a href="./index.html" class="logo"><img src="./img/fejlec.jpg" alt="" class="img-fluid"></a>
+                        <p style="font-size: 10pt;">Európa Tréning Szervezetfejlesztő és Tanácsadó Kft.</p>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Rólunk
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: #9c1418;">
+                                        <li><a class="dropdown-item" href="./index.html#about"
+                                                style="color: white;">Cégismertető</a></li>
+                                        <li><a class=" dropdown-item" href="./index.html#team" style="color: white;">
+                                                Szakértőink</a></li>
 
-            <a href="./index.html" class="logo"><img src="./img/fejlec.jpg" alt="" class="img-fluid"></a>
+                                        <li><a class=" dropdown-item" href="./index.html#testimonials"
+                                                style="color: white;">
+                                                Rólunk mondták</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Szolgáltatások
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: #9c1418;">
+                                        <li><a class="dropdown-item" href="./diagnostic_services.html"
+                                                style="color: white;">Diagnosztika</a></li>
+                                        <li><a class="dropdown-item" href="./od_services.html"
+                                                style="color: white;">Szervezetfejlesztés</a></li>
 
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li class="dropdown"><a href="#"><span>Szolgáltatások</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="./diagnostic_services.html">Diagnosztika</a></li>
-                            <li><a href="./od_services.html">Szervezetfejlesztés</a></li>
-                            <li><a href="./human_services.html">Humánfejlesztés</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#"><span>Rólunk</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="./index.html#about">Cégismertető</a></li>
-                            <li><a href="./index.html#team">Szakértőink</a></li>
-                            <li><a href="./index.html#testimonials">Rólunk mondták</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link scrollto" href="./index.html#contact">Kapcsolat</a></li>
-                    <li><a class="nav-link scrollto o" href="./index.html#ref">Referenciák</a></li>
-                </ul>
+                                        <li><a class="dropdown-item" href="./human_services.html"
+                                                style="color: white;">Humánfejlesztés</a></li>
+                                    </ul>
+                                </li>
 
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-        </div>
-        <div class="container d-flex align-items-center justify-content-between">
-            <a class="navbar-brand">Európa Tréning Szervezetfejlesztő és Tanácsadó Kft.</a>
-            <nav class="navbar bg-light">
-                <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Referenciák</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Kapcsolat</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search" id="form">
+                                <input class="form-control me-2" type="search" id="query" name="q" placeholder=""
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit"><i
+                                        class="bi bi-search"></i></button>
+                            </form>
+                            <!-- jscript -->
+                            <script>
+                                const f = document.getElementById('form');
+                                const q = document.getElementById('query');
+                                const google = 'https://www.google.com/search?q=site%3A+';
+                                const site = 'http://www.europatrening.hu/index.php';
+
+                                function submitted(event) {
+                                    event.preventDefault();
+                                    const url = google + site + '+' + q.value;
+                                    const win = window.open(url, '_blank');
+                                    win.focus();
+                                }
+
+                                f.addEventListener('submit', submitted);
+                            </script>
+
+                            <!-- End jscript -->
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+
                 </div>
-            </nav>
-        </div>
-    </header><!-- End Header -->
-
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
 
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
+        </nav>
+    </header>
+    <!-- End Navbar-->
 
-            </div>
-        </div>
+    <!-- Nyitokep-->
+
+    <div class="flex-container about" style="background-image: url(./img/nyitokep1.png); background-repeat: no-repeat; background-size: 100% 100%; 
+        padding-top: 40%; padding-bottom: 0%; text-align: center;">
+        <img src="./img/diagnosztika_kerek.png" width="150px" style="margin: 0%; position: static; margin-bottom: -7%;">
+
     </div>
+
+    <!-- End Nyitokep -->
 
     <!-- ======= Diagnosztika bevezető ======= -->
     <section id="diagbev" class="about">
-        <div class="container">
+        <div class="container" style="padding-top: 0px; background-color: rgba(0,0,0,0.2); max-width: 100%;">
 
-            <div class="section-title">
-                <h2>Diagnosztika</h2>
+            <div class="section-title" style="max-width: 100%;">
+                <h2
+                    style="text-align: center; padding-top: 100px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700;">
+                    DIAGNOSZTIKA</h2>
             </div>
 
             <div class="row content">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 20pt; text-align: center; padding-top: 80px;">
                         A diagnózis kompetenciatesztből, motivációs tesztből (CAPTain online), a magatartást feltáró
                         diagnosztikai workshopból, valamint a háromoldalú (érintett-vezetője-szakértő)
                         értékelő/fejlesztő megbeszélésből áll, amely
                     </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>visszajelzést ad a vizsgálatba bevont munkatárs
+                    <ul
+                        style="font-family: 'Raleway' Medium; font-size: 20pt; text-align: justify; padding-bottom: 80px;">
+                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>visszajelzést ad a vizsgálatba
+                            bevont munkatárs
                             számára eredményességük növeléséről, erőforrásaik gazdaságosabb felhasználásáról,
                             önfejlődési lehetőségeikről, valamint </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>képet ad a vezetésnek (tulajdonosok, menedzsment) a
+                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>képet ad a vezetésnek
+                            (tulajdonosok, menedzsment) a
                             beosztottak aktuális képességeiről, fejlesztendő területeiről és kiaknázatlan
                             potenciáljairól. </li>
                     </ul>
                 </div>
+                <div class="col-lg-2"></div>
 
             </div>
 
         </div>
     </section><!-- End Diagnosztika bevezető Section -->
 
+    <!-- Nyitokep-->
+
+    <div id="vezdiag" class="flex-container about" style="background-image: url(./img/vezetoi_diagnozis1.jpg); background-repeat: no-repeat; background-size: 100% 100%; 
+padding-top: 40%; padding-bottom: 0%; text-align: center;">
+    </div>
+
+    <!-- End Nyitokep -->
+
     <!-- ======= Vezetői diagnosztika ======= -->
-    <section id="vezdiag" class="about">
-        <div class="container">
+    <section class="about">
+        <div class="container" style="padding-top: 0px; background-color: #9c1418; max-width: 100%;">
+            <!-- <img src="./img/vezetoi_diagnozis1.jpg" max-width="100%" class="img-fluid"> -->
 
-            <div class="section-title">
-                <h2>Vezetői diagnózis</h2>
-            </div>
-
-            <div class="row content">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8">
-                    <p>
-                        Minden cégvezető számára kiemelten fontos, hogy az általa irányított felső- és középvezetői
-                        hierarchia megértse a vállalati célokat, azonosuljon velük, valamint hatékonyan közvetítse és
-                        képviselje azokat a beosztottak felé. Egy cégvezető tulajdonosi, befektetői megítélését az
-                        üzleti számokon túl a vállalat humán erőforrásainak az aktuális állapota is jelentősen
-                        befolyásolja. Ezen belül kiemelten fontos szerepet játszik a vállalati vezetői réteg vezetői
-                        kompetenciája, annak megítélése.
-                    </p>
-                    <p>
-                        A vezetői kompetencia-diagnózis és fejlesztési program lehetővé teszi a vállalatvezetés számára
-                        a céges vezetői kör kompetenciájának és motivációjának az objektív megismerését. Ezek
-                        bemutatására a nemzetközileg használt és elismert CAPTain teszteket alkalmazzuk, amelyek a
-                        vizsgált személy által (online) kitöltött részletes kompetencia és motivációs kérdőíveken
-                        alapulnak. A diagnózis során végzett mérések eredményét a vizsgált személy és a cégvezetés
-                        egyaránt megismeri. Egy összetettebb vállalati vezetői hierarchia esetében a módszer
-                        eredményesen alkalmazható minden olyan vezetői szinten, amelynek delegálási feladatai vannak.
-                    </p>
-                    <h3>A diagnózis folyamata</h3>
-                    <p>
-                        A <strong>CAPTain Kompetencia teszt</strong> munka-alkalmasságot mérő, internet alapú teszt,
-                        amely a munka
-                        világában fontos tulajdonságok, attitűdök, viselkedésminták mérésére szolgál. A teszt megfelel a
-                        legmagasabb nemzetközi és hazai szakmai követelményeknek és teljes mértékben tiszteletben tartja
-                        a személyiségi jogokat. (Az objektivitási-, érvényességi- és megbízhatósági vizsgálatok
-                        eredményei igény szerint elérhetők.)
-                    </p>
-                    <p>
-                        A teszt az objektív munkahelyi viselkedést (CAPTain Analízis teszt) és a vizsgált személy
-                        önértékelését is (CAPTain Szubjektív kérdőív) méri, így megmutatja az önismeretet,
-                        én-integrációt.
-                    </p>
-                    <p>
-                        <strong>CAPTain Motivációs kérdőív</strong> szintén internet alapú teszt, amelynek célja azon
-                        motivációk
-                        feltérképezése, amelyek a munkában tudatosan vagy tudattalanul irányítják a személyes döntéseket
-                        és cselekedeteket. A teszt:
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>rangsort állít fel az egyes motivációs faktorok között,
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>részletes leírást ad az egyes motivátorok erősségéről és
-                            annak jelentőségéről,</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>megadja a kitöltő motivációs típusát és annak
-                            részletes jellemzését.</li>
-                    </ul>
-                    <p>
-                        A <strong>diagnosztikai workshop</strong> 4-6 fő részvételével lebonyolított csoportos
-                        vizsgálat, egy speciális
-                        assessment center (AC), amelynek során a résztvevők olyan döntési, probléma-megoldási,
-                        delegálási, konfliktuskezelési stb. helyzetgyakorlatokban vesznek részt, amelyek a
-                        mindennapjaikban rendszeresen előfordulnak. A gyakorlatok megidézik a munka világának szakmai
-                        dilemmáit és emberi viszonylatait, a hierarchikus relációkat és a függelmi helyzeteket. Azon
-                        túl, hogy a szituációk tanulságosak és élvezetesek, viselkedéselemző szakértőink lehetőséget
-                        kapnak arra, hogy a szereplők magatartását vizsgálat tárgyává tegyék.
-                    </p>
-                    <p>
-                        A <strong>diagnózis eredménye</strong>
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a vezetői „látlelet”, amely
-                            segítséget nyújt a
-                            menedzsmentnek a vezetői kockázatok értékeléséhez,
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a vizsgálatba vont vezetők
-                            motivációja növekszik
-                            (tisztánlátás, törődés és segítő figyelem a cég részéről),</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>célzottan meghatározhatók a
-                            fejlesztési területek és
-                            irányok,</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>az eredmények kapcsolhatók a
-                            vezetői
-                            teljesítmény-mérési és értékelési rendszerekhez.</li>
-                    </ul>
-                    <p>
-                        Összegző visszajelzés készül arra vonatkozóan, hogy melyek azok a közös tulajdonságai/igényei a
-                        csoportnak, amelyekre külön figyelmet kell fordítani. A felmért résztvevők kompetenciáit
-                        statisztikailag elemezzük és jellemzést készítünk a csoport egészére vonatkozóan.
-                    </p>
-                    <p>
-                        A vállalat menedzsmentje részére a csoportos visszajelzésen kívül egyéni szinten is értékelő
-                        tájékoztatást nyújtunk a résztvevőkről, azok erősségeiről és fejlesztendő területeiről, amelyek
-                        alapján tervezhetők a szükséges támogatások, esetleges feladat- és munkakörváltozások, belső
-                        karrier utak, illetve az utánpótlás.
-                    </p>
-                    <p>
-                        A <strong>háromoldalú (érintett-vezetője-szakértő részvételével lebonyolított)
-                            értékelő/fejlesztő megbeszélés</strong>ekre a diagnózis végén kerül sor, ahol a mérési
-                        eredményekre alapozva
-                        kijelölhetők az adott vezető fejlődési/fejlesztési célkitűzései, vállalásai, amelyek szorosan
-                        kapcsolhatók a
-                        vezetői teljesítmény-értékeléshez. A háromoldalú megbeszélések háromhavonta követik egymást, így
-                        biztosítva a célok aktualitását, a vállalások eredményeinek értékelését, valamint a vezetői
-                        motiváció és elkötelezettség erősítését.
-                    </p>
-                    <p>
-                        A diagnózis alapján az Európa Tréning célzott fejlesztési, képzési programra tesz javaslatot a
-                        menedzsment számára. A program elsősorban az önfejlődés/önfejlesztés igényére épül és egyéni-,
-                        illetve csoportos coachinggal, „on the job” tréningekkel, jelenléti és online képzési
-                        programokkal, távmentoringgal, értékműhelyekkel, workshopokkal stb. segíti a résztvevőket
-                        vezetői fejlődésükben. A teljesített fejlesztési programot követően cégünk ismételten elvégzi a
-                        vezetői kompetenciák mérését, így igazolva a módszertan által garantált eredményeket.
-                    </p>
-                    <a href="./service_pdf.html#vezdiag" class="btn-learn-more" target="_blank">Vezetői diagnózis
-                        megnyitása</a>
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Vezetői diagnosztika Section -->
-
-    <!-- ======= Ügyfél diagnosztika Section ======= -->
-    <section id="clientdiag" class="about">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Ügyfélszolgálati/munkatársi diagnózis</h2>
-            </div>
-
-            <div class="row content">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8">
-                    <h3>A) Mérésen alapuló kompetenciavizsgálat</h3>
-                    <p>
-                        Különös jelentőséget kapnak az ügyfélszolgálati kompetenciák változás, növekedés idején, amikor
-                        a megszokottól eltérő ügyfélkezelést, kiszolgálást, probléma-megoldást, konfliktus-megelőzést,
-                        valamint asszertív kommunikációt vár el a szervezet. Ehhez a szakmai tudáson túl az
-                        ügyféltípusok ismeretére és a kezelésükre alkalmas eszköztárra van szükség, ami meghatározza az
-                        ügyfélkiszolgálás minőségét.
-                    </p>
-                    <p>
-                        A kompetencia-diagnózis és fejlesztési program lehetővé teszi a vállalatvezetés számára a
-                        vizsgálatba vont munkatársak kompetenciájának objektív megismerését. Ennek bemutatására a
-                        nemzetközileg használt és elismert CAPTain teszt-rendszert alkalmazzuk, amely a vizsgált személy
-                        által (online) kitöltött részletes kompetencia és motivációs kérdőíven alapul. A diagnózis során
-                        végzett mérések eredményét a vizsgált személy és a cégvezetés egyaránt megismeri. Egy
-                        összetettebb vállalati hierarchia esetében a módszer eredményesen alkalmazható minden szinten és
-                        területen.
-                    </p>
-                    <h4>A diagnózis folyamata:</h4>
-                    <p>
-                        A <strong>CAPTain Kompetencia teszt</strong> munka-alkalmasságot mérő, internet alapú teszt,
-                        amely a munka
-                        világában fontos tulajdonságok, attitűdök, viselkedésminták mérésére szolgál. A teszt megfelel a
-                        legmagasabb nemzetközi és hazai szakmai követelményeknek és teljes mértékben tiszteletben tartja
-                        a személyiségi jogokat. (Az objektivitási-, érvényességi- és megbízhatósági vizsgálatok
-                        eredményei igény szerint elérhetők.)
-                    </p>
-                    <p>
-                        A teszt az objektív munkahelyi viselkedést (CAPTain Analízis teszt) és a vizsgált személy
-                        önértékelését is (CAPTain Szubjektív kérdőív) méri, így megmutatja az önismeretet,
-                        én-integrációt.
-                    </p>
-                    <p>
-                        <strong>CAPTain Motivációs kérdőív</strong> szintén internet alapú teszt, amelynek célja azon
-                        motivációk
-                        feltérképezése, amelyek a munkában tudatosan vagy tudattalanul irányítják a személyes döntéseket
-                        és cselekedeteket. A teszt:
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>rangsort állít fel az egyes
-                            motivációs faktorok között,
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>részletes leírást ad az egyes
-                            motivátorok erősségéről és
-                            annak jelentőségéről,</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>megadja a kitöltő motivációs
-                            típusát és annak részletes
-                            jellemzését.</li>
-                    </ul>
-                    <p>
-                        A <strong>diagnosztikai workshop</strong> 4-6 fő részvételével lebonyolított csoportos
-                        vizsgálat, egy speciális
-                        assessment center (AC), amelynek során a résztvevők olyan ügyfélkezelési, kiszolgálási,
-                        probléma-megoldási, konfliktuskezelési stb. helyzetgyakorlatokban vesznek részt, amelyek a
-                        mindennapjaikban rendszeresen előfordulnak. A gyakorlatok megidézik a munka világának szakmai
-                        dilemmáit és emberi viszonylatait, az ügyfélkapcsolati relációkat és az extrém helyzeteket. Azon
-                        túl, hogy a szituációk tanulságosak és élvezetesek, viselkedéselemző szakértőink lehetőséget
-                        kapnak arra, hogy a szereplők magatartását vizsgálat tárgyává tegyék.
-                    </p>
-                    <p>
-                        A <strong>diagnózis eredménye</strong>
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>az ügyfélszolgálati „látlelet”,
-                            amely segítséget nyújt a
-                            menedzsmentnek a kockázatok értékeléséhez,
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a vizsgálatba vont munkatársak
-                            motivációja növekszik
-                            (tisztánlátás, törődés és segítő figyelem a cég részéről),</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>célzottan meghatározhatók a
-                            fejlesztési területek és
-                            irányok,</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>az eredmények kapcsolhatók a
-                            teljesítmény-mérési és
-                            értékelési rendszerekhez.</li>
-                    </ul>
-                    <p>
-                        Összegző visszajelzés készül arra vonatkozóan, hogy melyek azok a közös tulajdonságai/igényei a
-                        csoportnak, amelyekre külön figyelmet kell fordítani. A felmért résztvevők kompetenciáit
-                        statisztikailag elemezzük és jellemzést készítünk a csoport egészére vonatkozóan, ami
-                        tartalmazza.
-                    </p>
-                    <p>
-                        A vállalat menedzsmentje részére a csoportos visszajelzésen kívül egyéni szinten is értékelő
-                        tájékoztatást nyújtunk a résztvevőkről, azok erősségeiről és fejlesztendő területeiről, amelyek
-                        alapján tervezhetők a szükséges támogatások, esetleges feladat- és munkakörváltozások, belső
-                        karrier utak, illetve az utánpótlás.
-                    </p>
-                    <p>
-                        A <strong>háromoldalú értékelő/fejlesztő (érintett-vezetője-szakértő részvételével
-                            lebonyolított)
-                            megbeszélések</strong>re a diagnózis végén kerül sor, ahol a mérési eredményekre alapozva
-                        kijelölhetők az
-                        adott munkatárs fejlődési/fejlesztési célkitűzései, vállalásai, amelyek szorosan kapcsolhatók a
-                        teljesítmény-értékeléséhez. A háromoldalú megbeszélések háromhavonta követik egymást, így
-                        biztosítva a célok aktualitását, a vállalások eredményeinek értékelését, valamint a motiváció és
-                        elkötelezettség erősítését.
-                    </p>
-                    <p>
-                        A diagnózis alapján az Európa Tréning célzott fejlesztési, képzési programra tesz javaslatot a
-                        menedzsment számára. A program elsősorban az önfejlődés/önfejlesztés igényére épül és egyéni-,
-                        illetve csoportos coachinggal, „on the job” tréningekkel, jelenléti és online képzési
-                        programokkal, távmentoringgal, értékműhelyekkel, workshopokkal stb. segíti a résztvevőket
-                        fejlődésükben. A teljesített fejlesztési programot követően cégünk ismételten elvégzi a
-                        kompetenciák mérését, így igazolva a módszertan által garantált eredményeket.
-                    </p>
-                    <a href="./service_pdf.html#clientdiag" class="btn-learn-more" target="_blank">Ügyfélszolgálati
-                        diagnózis
-                        megnyitása</a>
-                    <h3>B) Megfigyelésen alapuló kompetenciavizsgálat </h3>
-                    <p>
-                        A kompetencia alapú próbavásárlás képzési-fejlesztési program (Mystery Shopping for SkillsTM)
-                        lehetővé teszi az erőforrások egyesítését, mind a próbavásárlások mind az arra épülő
-                        humánfejlesztés előnyeinek kölcsönös felhasználását. A program olyan kérdésekre is választ ad,
-                        amelyek korábban talán fel sem merültek a szervezetekben.
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>Felkészült, képzett, ugyanakkor
-                            az átlagembert
-                            megtestesítő próbavásárlók szemével vizsgáljuk a tényeket, és az eredmények révén világosan
-                            kirajzolódnak a fejlesztendő területek, javítandó folyamatok. Programunk, a tapasztaltak
-                            alapján megfogalmazott célokat testre-szabott képzések segítségével ülteti át a gyakorlatba.
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>A program eredményeként:</li>
-                        <li>
-                            <ul>
-                                <li><i class="ri-check-double-line" style="color: #7B021A;"></i>az eladói és az
-                                    ügyfélszolgálati tevékenység
-                                    javul,
-                                    színvonala emelkedik
-                                </li>
-                                <li><i class="ri-check-double-line" style="color: #7B021A;"></i>az értékesítés és
-                                    marketing ráfordítások
-                                    eredményei megsokszorozódnak</li>
-                                <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a humán- és marketing
-                                    források közös
-                                    felhasználása javítja a vállalati gazdálkodást</li>
-                                <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a vevői oldalon
-                                    tapasztalható változás
-                                    következtében javul a szervezet megítélése</li>
-                            </ul>
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>A program célcsoportjai:</li>
-                        <li>
-                            <ul>
-                                <li><i class="ri-check-double-line" style="color: #7B021A;"></i>Kiterjedt
-                                    <strong>értékesítési és
-                                        ügyfélkapcsolati</strong>
-                                    tevékenységet folytató szervezetek
-                                </li>
-                                <li><i class="ri-check-double-line" style="color: #7B021A;"></i>Fiókhálózattal,
-                                    irodahálózattal rendelkező
-                                    vállalatok, szervezetek (közmű- és telefonszolgáltatók, bankok, okmányirodák, posta)
-                                </li>
-                                <li><i class="ri-check-double-line" style="color: #7B021A;"></i>Kereskedelmi hálózatok
-                                    (üzletláncok,
-                                    töltőállomások, gyógyszertárak, autókereskedések)</li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Ügyfél diagnosztika Section -->
-
-    <!-- ======= Megfigyelési szempontrendszer Section ======= -->
-    <section id="megfigyel" class="about">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Kompetencia-vizsgálat és Fejlesztő Konzultáció</h2>
-            </div>
-
-            <div class="row content">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8">
-                    <p>
-                        Programunk kompetenciatesztből, motivációs tesztből (CAPTain online), valamint
-                        értékelő-fejlesztő konzultációból (online/személyes) áll, amely
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>képet ad a résztvevő aktuális
-                            képességeiről,
-                            készségeiről, erősségeiről, illetve fejlesztendő területeiről, valamint</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>visszajelzést nyújt a résztvevő
-                            eredményességének
-                            növeléséről, erőforrásainak gazdaságosabb felhasználásáról, önfejlődési lehetőségéről.</li>
-                    </ul>
-                    <img src="./img/service_diag_1.png" alt="" class="img-fluid"></a>
-                    <p>
-                        Csomagunkat ajánljuk
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i><strong>álláskeresőknek,
-                                pályamódosítóknak,
-                                pályakezdőknek</strong><br>akik szeretnék megtudni erősségeiket, sikerpotenciáljaikat,
-                            rejtett értékeiket és ez alapján hiteles vizsgálati dokumentációval alátámasztani
-                            önéletrajzukat, motivációs levelüket.
-                        </li>
-                        <li><i class="ri-check-double-line"
-                                style="color: #7B021A;"></i><strong>vezetőknek</strong><br>akiktől a környezeti
-                            kihívások új válaszokat igényelnek. Számukra elengedhetetlen a szakmai tudáson túl, az
-                            irányítói és motivációs eszköztár birtoklása és kiismerése. Az európai referencia adatok
-                            alapján kialakított profilrendszer lehetővé teszi, hogy a vezetők saját kompetenciáikat
-                            hiteles keretrendszerhez tudják hasonlítani.
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i><strong>értékesítői feladatokat
-                                ellátó
-                                munkatársaknak</strong><br>amikor a változás, növekedés a megszokottól eltérő
-                            ügyfélkezelést, kiszolgálást, problémamegoldást, konfliktuskezelést, valamint asszertív
-                            kommunikációt követel, akkor különleges jelentőséget kap az értékesítői kompetenciák
-                            ismerete, fejlesztése.
-                        </li>
-                        <li><i class="ri-check-double-line"
-                                style="color: #7B021A;"></i><strong>mindenkinek</strong><br>aki önismeretét bővíteni
-                            szeretné, saját fejlődését fontosnak tartja, dolgozzon bármilyen területen.
-                        </li>
-
-                    </ul>
-                    <p>
-                        Programunk tartalma:
-                    </p>
-                    <p>
-                        A <strong>CAPTain Kompetencia teszt</strong> munka-alkalmasságot mérő, internet alapú teszt,
-                        amely a munka
-                        világában fontos tulajdonságok, attitűdök, viselkedésminták mérésére szolgál. A teszt megfelel a
-                        legmagasabb nemzetközi és hazai szakmai követelményeknek és teljes mértékben tiszteletben tartja
-                        a személyiségi jogokat. (Az objektivitási-, érvényességi- és megbízhatósági vizsgálatok
-                        eredményei igény szerint elérhetők.)
-                        A teszt az objektív munkahelyi viselkedést (CAPTain Analízis teszt) és a vizsgált személy
-                        önértékelését is (CAPTain Szubjektív kérdőív) méri, így megmutatja az önismeretet,
-                        én-integrációt.
-
-                    </p>
-                    <p>
-                        <strong>CAPTain Motivációs kérdőív</strong> szintén internet alapú teszt, amelynek célja azon
-                        motivációk
-                        feltérképezése, amelyek a munkában tudatosan vagy tudattalanul irányítják a személyes döntéseket
-                        és cselekedeteket. A teszt:
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>rangsort állít fel az egyes
-                            motivációs faktorok között,
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>részletes leírást ad az egyes
-                            motivátorok erősségéről és
-                            annak jelentőségéről,
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>megadja a kitöltő motivációs
-                            típusát és annak részletes
-                            jellemzését.</li>
-
-                    </ul>
-                    <p>
-                        <strong>Az értékelő-fejlesztő konzultáció</strong> személyre szabottan, a kompetenciamérés
-                        eredményeinek elemzése
-                        alapján, a résztvevő helyzetéhez alkalmazkodva nyújt kézzelfogható segítséget magasan képzett
-                        szakemberünk által.
-                    </p>
-                    <p>
-                        A konzultáció célja:
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>meglévő értékek tudatosítása,
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>gyakorlati alkalmazásban való
-                            segítségnyújtás,
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>fejlesztendő területek
-                            megismerése,</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>(állás)interjúk, meetingek során
-                            a saját értékekre
-                            fókuszáló kommunikáció segítése.</li>
-
-                    </ul>
-                    <p>
-                        <strong>A diagnózis eredménye:</strong>
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>DOKUMENTÁCIÓ a vizsgálat
-                            eredményéről, valamint egy
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>SZAKMAI AJÁNLÓLEVÉL az értékek
-                            és a potenciálok alapján.
-                        </li>
-
-                    </ul>
-                    <p>
-                        A vizsgálati eredmények Dokumentációja és az ehhez kapcsolódó alkalmazási segítség alapján
-                        tudatosulnak az erősségek, az értékek és a potenciálok, valamint célzottan meghatározhatók a
-                        fejlesztési területek és irányok.
-                    </p>
-                    <p>
-                        A Szakmai Ajánlólevélben rögzítésre kerülnek azok az erősségek és erények, amelyek a résztvevőt
-                        jellemzik, és amely készségekből és képességekből mind az egyén, mind a munkáltató egyaránt
-                        profitálni tud. Ebben a dokumentumban a résztvevő hiteles, alátámasztott jellemzést kap
-                        önmagáról, ami előnyt jelenthet számára azáltal, hogy a vetélytársakkal szemben kiemeli, és
-                        megkönnyíti a munkaerőpiacon való elhelyezkedést, meggyorsítja a kiválasztási folyamatot. Ezt az
-                        ajánlást a résztvevő csatolni tudja önéletrajzához is.
-                    </p>
-                    <a href="./service_pdf.html#megfigyel" class="btn-learn-more" target="_blank">Kompetencia-vizsgálat
-                        és
-                        Fejlesztő konzultáció megnyitása</a>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End Megfigyelési szempontrendszer Section -->
-
-
-
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-
-        <div class="footer-top">
-            <div class="container">
+            <div class="section-title" style="background-color: #9c1418; max-width: 100%;">
                 <div class="row">
-
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Európa Tréning Kft.</h3>
-                        <p>
-                            1077 Budapest <br>
-                            Wesselényi utca 4. 4. em. 23.<br>
-                            <br><br>
-
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <h2
+                            style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: white;">
+                            VEZETŐI DIAGNÓZIS</h2>
+                        <p
+                            style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: white; padding-bottom: 60px;">
+                            A VEZETŐI KOMPETENCIA-DIAGNÓZIS ÉS FEJLESZTÉSI PROGRAM LEHETŐVÉ <br>TESZI A VÁLLALATVEZETÉS
+                            SZÁMÁRA A CÉGES VEZETŐI KÖR <br> KOMPETENCIÁJÁNAK ÉS MOTIVÁCIÓJÁNAK AZ OBJEKTÍV
+                            MEGISMERÉSÉT.
                         </p>
                     </div>
-
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Menü</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#about">Rólunk</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#contact">Kapcsolat</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#ref">Referenciák</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 footer-newsletter">
-                        <div>
-                            <a href="https://www.facebook.com/profile.php?id=100086475879847" class="facebook"><img
-                                    src="./assets/img/facebook.png" width="70px"></a>
-                            <a href="https://www.instagram.com/europatrening_hu/"><img src="./assets/img/instagram.png"
-                                    width="40px"></a>
-                        </div>
-                    </div>
-                    <div id="preloader" class="col-lg-2"></div>
-                    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-                            class="bi bi-arrow-up-short"></i></a>
+                    <div class="col-lg-3"></div>
                 </div>
             </div>
         </div>
+        <div class="container" style="padding-top: 0px; background-color: white; max-width: 100%;">
+            <div class="row content">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h2
+                        style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: #9c1418;">
+                        A DIAGNÓZIS FOLYAMATA</h2>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        A Kompetencia teszt munka-alkalmasságot mérő, internet alapú teszt, amely a munka világában
+                        fontos tulajdonságok, attitűdök, viselkedésminták mérésére szolgál.</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        Motivációs kérdőív szintén internet alapú teszt, amelynek célja azon motivációk feltérképezése,
+                        amelyek a munkában tudatosan vagy tudattalanul irányítják a személyes döntéseket és
+                        cselekedeteket.</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        A diagnosztikai workshop 4-6 fő részvételével lebonyolított csoportos vizsgálat, egy speciális
+                        assessment center (AC), amelynek során a résztvevők olyan döntési, probléma-megoldási,
+                        delegálási, konfliktuskezelési stb. helyzetgyakorlatokban vesznek részt, amelyek a
+                        mindennapjaikban rendszeresen előfordulnak.</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        Összegző visszajelzés készül arra vonatkozóan, hogy melyek azok a közös tulajdonságai/igényei a
+                        csoportnak, amelyekre külön figyelmet kell fordítani.</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        A vállalat menedzsmentje részére a csoportos visszajelzésen kívül egyéni szinten is értékelő
+                        tájékoztatást nyújtunk a résztvevőkről, azok erősségeiről és fejlesztendő területeiről, amelyek
+                        alapján tervezhetők a szükséges támogatások, esetleges feladat- és munkakörváltozások, belső
+                        karrier utak, illetve az utánpótlás.</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        A háromoldalú (érintett–vezetője–szakértő részvételével lebonyolított) értékelő/fejlesztő
+                        megbeszélésekre a diagnózis végén kerül sor, ahol a mérési eredményekre alapozva kijelölhetők az
+                        adott vezető fejlődési/fejlesztési célkitűzései, vállalásai, amelyek szorosan kapcsolhatók a
+                        vezetői teljesítmény-értékeléshez.</p>
+                    <p style="text-align: center; padding-top: 60px; padding-bottom: 80px;">
+                        <a href="./service_pdf.html#vezdiag" class="btn-learn-more" target="_blank">Vezetői diagnózis
+                            megnyitása</a>
+                    </p>
+                </div>
+                <div class="col-lg-3"></div>
 
 
-    </footer><!-- End Footer -->
+            </div>
+        </div>
+    </section>
+    <!-- End Vezetői diagnosztika Section -->
 
+    <!-- Nyitokep-->
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <div id="clientdiag" class="flex-container about" style="background-image: url(./img/ugyfelszolgalati_diagnozis.jpg); background-repeat: no-repeat; background-size: 100% 100%; 
+ padding-top: 40%; padding-bottom: 0%; text-align: center;">
+    </div>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <!-- End Nyitokep -->
 
+    <!-- ======= Ügyfélszolgálati/munkatársi diagnózis Section ======= -->
+    <section class="about">
+        <div class="container" style="padding-top: 0px; background-color: #9c1418; max-width: 100%;">
+
+            <div class="section-title" style="background-color: #9c1418;">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <h2
+                            style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: white;">
+                            ÜGYFÉLSZOLGÁLATI/MUNKATÁRSI DIAGNÓZIS</h2>
+                        <p
+                            style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: white; padding-bottom: 80px;">
+                            A KOMPETENCIA-DIAGNÓZIS ÉS FEJLESZTÉSI PROGRAM LEHETŐVÉ TESZI <br> A VÁLLALATVEZETÉS SZÁMÁRA
+                            A
+                            VIZSGÁLATBA VONT MUNKATÁRSAK <br> KOMPETENCIÁJÁNAK OBJEKTÍV MEGISMERÉSÉT.
+                        </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="padding-top: 0px; background-color: white; max-width: 100%;">
+            <div class="row content">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h2
+                        style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: #9c1418;">
+                        A DIAGNÓZIS FOLYAMATA</h2>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        A Kompetencia teszt munka-alkalmasságot mérő, internet alapú teszt, amely a munka világában
+                        fontos tulajdonságok, attitűdök, viselkedésminták mérésére szolgál. </p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        Motivációs kérdőív szintén internet alapú teszt, amelynek célja azon motivációk feltérképezése,
+                        amelyek a munkában tudatosan vagy tudattalanul irányítják a személyes döntéseket és
+                        cselekedeteket. </p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        A diagnosztikai workshop 4-6 fő részvételével lebonyolított csoportos vizsgálat, egy speciális
+                        assessment center (AC), amelynek során a résztvevők olyan döntési, probléma-megoldási,
+                        delegálási, konfliktuskezelési stb. helyzetgyakorlatokban vesznek részt, amelyek a
+                        mindennapjaikban rendszeresen előfordulnak.</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        Összegző visszajelzés készül arra vonatkozóan, hogy melyek azok a közös tulajdonságai/igényei a
+                        csoportnak, amelyekre külön figyelmet kell fordítani.</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        A vállalat menedzsmentje részére a csoportos visszajelzésen kívül egyéni szinten is értékelő
+                        tájékoztatást nyújtunk a résztvevőkről, azok erősségeiről és fejlesztendő területeiről, amelyek
+                        alapján tervezhetők a szükséges támogatások, esetleges feladat- és munkakörváltozások, belső
+                        karrier utak, illetve az utánpótlás.</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        A háromoldalú (érintett–vezetője–szakértő részvételével lebonyolított) értékelő/fejlesztő
+                        megbeszélésekre a diagnózis végén kerül sor, ahol a mérési eredményekre alapozva kijelölhetők az
+                        adott vezető fejlődési/fejlesztési célkitűzései, vállalásai, amelyek szorosan kapcsolhatók a
+                        vezetői teljesítmény-értékeléshez.</p>
+                    <p style="text-align: center; padding-top: 60px; padding-bottom: 80px;">
+                        <a href="./service_pdf.html#clientdiag" class="btn-learn-more" target="_blank">Ügyfélszolgálati
+                            diagnózis megnyitása</a>
+                    </p>
+                </div>
+                <div class="col-lg-3"></div>
+
+            </div>
+        </div>
+        <!-- ======= End Ügyfélszolgálati/munkatársi diagnózis Section ======= -->
+
+        <!-- Nyitokep-->
+
+        <div id="megfigyel" class="flex-container about" style="background-image: url(./img/kompetencia_alapu_probavasarlas.jpg); background-repeat: no-repeat; background-size: 100% 100%; 
+padding-top: 40%; padding-bottom: 0%; text-align: center;">
+        </div>
+
+        <!-- End Nyitokep -->
+
+        <!-- Megfigyelésen alapuló kompetenciavizsgálat -->
+
+        <section class="about">
+            <div class="container" style="padding-top: 0px; background-color: #9c1418; max-width: 100%;">
+
+                <div class="section-title" style="background-color: #9c1418;">
+                    <div class="row">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-6">
+                            <h2
+                                style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: white;">
+                                MEGFIGYELÉSEN ALAPULÓ KOMPETENCIAVIZSGÁLAT</h2>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: white; padding-bottom: 80px;">
+                                A KOMPETENCIA ALAPÚ PRÓBAVÁSÁRLÁS KÉPZÉSI-FEJLESZTÉSI PROGRAM (MYSTERY SHOPPING FOR
+                                SKILLSTM) LEHETŐVÉ TESZI AZ ERŐFORRÁSOK EGYESÍTÉSÉT, MIND A PRÓBAVÁSÁRLÁSOK MIND AZ
+                                ARRA ÉPÜLŐ HUMÁNFEJLESZTÉS ELŐNYEINEK KÖLCSÖNÖS FELHASZNÁLÁSÁT.
+                            </p>
+                        </div>
+                        <div class="col-lg-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="padding-top: 0px; background-color: white; max-width: 100%;">
+                <div class="row content">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+
+                        <p
+                            style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; padding-top: 80px;">
+                            Felkészült, képzett, ugyanakkor az átlagembert megtestesítő próbavásárlók szemével
+                            vizsgáljuk a tényeket, és az eredmények révén világosan kirajzolódnak a fejlesztendő
+                            területek, javítandó folyamatok. </p>
+                        <p
+                            style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; padding-top: 60px; color: black; font-weight: 700;">
+                            A PROGRAM CÉLCSOPORTJAI: </p>
+                        <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; margin: 0%;">
+                            - Kiterjedt értékesítési és ügyfélkapcsolati tevékenységet folytató szervezetek</p>
+                        <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; margin: 0%;">
+                            - Fiókhálózattal, irodahálózattal rendelkező vállalatok, szervezetek (közmű- és
+                            telefonszolgáltatók, bankok, okmányirodák, posta) </p>
+                        <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; margin: 0%;">
+                            - Kereskedelmi hálózatok (üzletláncok, töltőállomások, gyógyszertárak, autókereskedések)
+                        </p>
+                        <p style="text-align: center; padding-top: 60px; padding-bottom: 80px;">
+                            <a href="./service_pdf.html#megfigyel" class="btn-learn-more"
+                                target="_blank">Kompetenciavizsgálat megnyitása</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-3"></div>
+
+                </div>
+            </div>
+            <!-- End Megfigyelésen alapuló kompetenciavizsgálat -->
+
+            <!-- Nyitokep-->
+
+            <div class="flex-container about" style="background-image: url(./img/konzultacio.jpeg); background-repeat: no-repeat; background-size: 100% 100%; 
+padding-top: 40%; padding-bottom: 0%; text-align: center;">
+            </div>
+
+            <!-- End Nyitokep -->
+
+            <!-- Konzultáció -->
+
+            <section id="konzultacio" class="about">
+                <div class="container" style="padding-top: 0px; background-color: #9c1418; max-width: 100%;">
+
+                    <div class="section-title" style="background-color: #9c1418;">
+                        <div class="row">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-8">
+                                <h2
+                                    style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: white;">
+                                    KOMPETENCIA-VIZSGÁLAT ÉS FEJLESZTŐ KONZULTÁCIÓ</h2>
+                                <p
+                                    style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: white; padding-bottom: 80px;">
+                                    PROGRAMUNK KOMPETENCIATESZTBŐL, MOTIVÁCIÓS TESZTBŐL (ONLINE), VALAMINT
+                                    ÉRTÉKELŐ-FEJLESZTŐ KONZULTÁCIÓBÓL (ONLINE/SZEMÉLYES) ÁLL, AMELY
+                                    KÉPET AD A RÉSZTVEVŐ AKTUÁLIS KÉPESSÉGEIRŐL, KÉSZSÉGEIRŐL, ERŐSSÉGEIRŐL,
+                                    ILLETVE FEJLESZTENDŐ TERÜLETEIRŐL, VALAMINT
+                                    VISSZAJELZÉST NYÚJT A RÉSZTVEVŐ EREDMÉNYESSÉGÉNEK NÖVELÉSÉRŐL,
+                                    ERŐFORRÁSAINAK GAZDASÁGOSABB FELHASZNÁLÁSÁRÓL, ÖNFEJLŐDÉSI LEHETŐSÉGÉRŐL.
+
+                                </p>
+                            </div>
+                            <div class="col-lg-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="padding-top: 0px; background-color: white; max-width: 100%;">
+                    <div class="row content">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <h2
+                                style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: #9c1418;">
+                                PROGRAMUNK TARTALMA</h2>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                                Mérő, internet alapú teszt, amely a munka világában fontos tulajdonságok,
+                                attitűdök, viselkedésminták mérésére szolgál. </p>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                                Motivációs kérdőív szintén internet alapú teszt, amelynek célja azon motivációk
+                                feltérképezése, amelyek a munkában tudatosan vagy tudattalanul irányítják a
+                                személyes döntéseket
+                                és cselekedeteket. </p>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                                Az értékelő-fejlesztő konzultáció személyre szabottan, a kompetenciamérés
+                                eredményeinek elemzése alapján, a résztvevő helyzetéhez alkalmazkodva nyújt
+                                kézzelfogható
+                                segítséget magasan képzett szakemberünk által</p>
+                            <h2
+                                style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: #9c1418;">
+                                A DIAGNÓZIS EREDMÉNYE</h2>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                                DOKUMENTÁCIÓ a vizsgálat eredményéről, valamint egy </p>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                                SZAKMAI AJÁNLÓLEVÉL az értékek és a potenciálok alapján. </p>
+                            <h2
+                                style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: #9c1418;">
+                                CSOMAGUNKAT AJÁNLJUK</h2>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; margin: 0%;">
+                                - álláskeresőknek, pályamódosítóknak, pályakezdőknek </p>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; margin: 0%;">
+                                - vezetőknek </p>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; margin: 0%;">
+                                - értékesítői feladatokat ellátó munkatársaknak</p>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; margin: 0%;">
+                                - mindenkinek</p>
+
+                            <p style="text-align: center; padding-top: 60px; padding-bottom: 80px;">
+                                <a href="./service_pdf.html#megfigyel" class="btn-learn-more"
+                                    target="_blank">Kompetenciavizsgálat megnyitása</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
+                </div>
+
+                <!-- End Konzultáció -->
+
+                <!-- Contact -->
+
+                <div class="container text-center"
+                    style="padding-top: 30px; padding-bottom: 30px; background-image: url(./img/papircsonak.jpg); background-repeat: no-repeat; background-size: 100% 100%; max-width: 100%;">
+                    <div class="row">
+                        <h2
+                            style="color: black; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; padding-bottom: 3%;">
+                            VEGYE FEL VELÜNK A KAPCSOLATOT
+                        </h2>
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-5" style="text-align: left; padding-top: 17px;">
+                            <iframe style="border:0; width: 100%; height: 270px; border-radius: 10px;"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.6591946227677!2d19.057898715818055!3d47.49655220356657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc4267290903%3A0xbeb463ab7628bd4b!2sBudapest%2C%20Wessel%C3%A9nyi%20u.%204%2C%201077!5e0!3m2!1shu!2shu!4v1659009074305!5m2!1shu!2shu"
+                                frameborder="0" allowfullscreen></iframe>
+                            <h4
+                                style="font-family: 'Raleway', bold; font-size: 16pt; font-weight: 700; padding-top: 2%;">
+                                Európa
+                                Tréning Kft.</h4>
+                            <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                                    class="bi bi-house-door-fill"></i>1077 Budapest, Wesselényi utca 4.
+                                4. em. 23.</p>
+                            <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                                    class="bi bi-telephone-fill"></i>+36 1 411-0640</p>
+                            <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                                    class="bi bi-envelope"></i>europatrening@europatrening.hu</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <form action="mailto:europatrening@europatrening.hu" method="post" role="form"
+                                enctype="text/plain" class="php-email-form"
+                                style="background-color: transparent; border-radius: 10px; height: 100%; padding: 0%;">
+                                <div class="form-group mt-3" style="padding-top: 0%; border-color: black; border: 2px;">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Név:"
+                                        required style="border: #bbb; border-style: solid;">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="E-mail cím:" required style="border: #bbb; border-style: solid;">
+                                </div>
+
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control" name="subject" id="subject"
+                                        placeholder="Tárgy:" required style="border: #bbb; border-style: solid;">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Üzenet:"
+                                        required style="height: 220px; border: #bbb; border-style: solid;"></textarea>
+                                </div>
+
+                                <div class="textarea" style="text-align: right;"><button type="submit"
+                                        style="color: #9c1418; border-style: hidden; border-radius: 10px;"><i
+                                            class="bi bi-caret-right-fill" style="height: 50px;"></i></button></div>
+                            </form>
+
+                        </div>
+                        <div class="col-lg-1"></div>
+
+                    </div>
+                </div>
+
+                <!-- End Contact -->
+
+                <!-- Footer -->
+
+                <div class="container text-center"
+                    style="padding-top: 50px; padding-bottom: 30px; background-color: #9c1418; max-width: 100%;">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-3">
+                            <p style="color: white; text-align: center; padding-left: 0%; padding-right: 0%;">
+                                <i class="bi bi-c-circle"></i>MINDEN JOG FENNTARTVA
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <p style="color: white; text-align: center; margin: 0%;">
+                                ADATKEZELÉSI TÁJÉKOZTATÓ
+                            </p>
+                        </div>
+                        <div class="col-lg-2">
+                            <p style="color: white; text-align: center;">
+                                IMPRESSZUM
+                            </p>
+                        </div>
+                        <div class="col-lg-2">
+                            <p style="text-align: center; font-size: 28pt; margin: 0%;">
+                                <a href="https://www.facebook.com/profile.php?id=100086475879847"
+                                    style="color: darkgray;"><i class="bi bi-facebook"></i></a>
+                                <a href="https://www.instagram.com/europatrening_hu/" style="color: darkgray;"><i
+                                        class="bi bi-instagram"></i></a>
+                            </p>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                </div>
+                <!-- End Footer -->
+
+                <!-- JavaScript -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+                    crossorigin="anonymous"></script>
+
+                <!-- About us -->
+                <script>
+                    var multipleCardCarousel = document.querySelector("#carouselExampleControls");
+                    if (window.matchMedia("(min-width: 768px)").matches) {
+                        var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                            interval: false,
+                        });
+                        var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+                        var cardWidth = $(".carousel-item").width();
+                        var scrollPosition = 0;
+                        $("#carouselExampleControls .carousel-control-next").on("click", function () {
+                            if (scrollPosition < carouselWidth - cardWidth * 4) {
+                                scrollPosition += cardWidth;
+                                $("#carouselExampleControls .carousel-inner").animate(
+                                    { scrollLeft: scrollPosition },
+                                    600
+                                );
+                            }
+                        });
+                        $("#carouselExampleControls .carousel-control-prev").on("click", function () {
+                            if (scrollPosition > 0) {
+                                scrollPosition -= cardWidth;
+                                $("#carouselExampleControls .carousel-inner").animate(
+                                    { scrollLeft: scrollPosition },
+                                    600
+                                );
+                            }
+                        });
+                    } else {
+                        $(multipleCardCarousel).addClass("slide");
+                    }
+                </script>
+                <!-- End About us -->
+
+                <!-- End JavaScript -->
 </body>
 
 </html>

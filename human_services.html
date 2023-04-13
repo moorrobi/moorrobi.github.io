@@ -1,388 +1,586 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
 
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Európa Tréning</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* About us */
+        .carousel-inner:first-of-type {
+            padding: 1em;
+        }
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+        .card {
+            margin: 0 0.5em;
+            box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+            border: none;
+        }
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: #e1e1e1;
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+        @media (min-width: 768px) {
+            .carousel-item {
+                margin-right: 0;
+                flex: 0 0 33.333333%;
+                display: block;
+            }
 
-    <!-- =======================================================
-  * Template Name: OnePage - v4.8.1
-  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+            .carousel-inner:first-of-type {
+                display: flex;
+            }
+        }
+
+        .card .img-wrapper {
+            max-width: 100%;
+            height: 13em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card img {
+            max-height: 100%;
+        }
+
+        @media (max-width: 767px) {
+            .card .img-wrapper {
+                height: 17em;
+            }
+        }
+
+        /* End About us*/
+
+        /* Szolgáltatások */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-left: 17%;
+            padding-right: 17%;
+        }
+
+        .flex-item-left {
+            flex: 20%;
+            justify-content: space-around;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        .flex-item-right {
+            flex: 20%;
+            justify-content: space-around;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        /* Responsive layout - makes a one column-layout instead of a two-column layout */
+        @media (max-width: 600px) {
+
+            .flex-container {
+                padding-left: 0%;
+                padding-right: 0%;
+            }
+
+            .flex-item-right,
+            .flex-item-left {
+                flex: 100%;
+            }
+        }
+
+        /* End Szolgáltatások */
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
-
-    <!-- ======= Header ======= -->
+    <!-- Navbar-->
     <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center justify-content-between">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-3">
+                        <a href="./index.html" class="logo"><img src="./img/fejlec.jpg" alt="" class="img-fluid"></a>
+                        <p style="font-size: 10pt;">Európa Tréning Szervezetfejlesztő és Tanácsadó Kft.</p>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Rólunk
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: #9c1418;">
+                                        <li><a class="dropdown-item" href="./index.html#about"
+                                                style="color: white;">Cégismertető</a></li>
+                                        <li><a class=" dropdown-item" href="./index.html#team" style="color: white;">
+                                                Szakértőink</a></li>
 
-            <a href="./index.html" class="logo"><img src="./img/fejlec.jpg" alt="" class="img-fluid"></a>
+                                        <li><a class=" dropdown-item" href="./index.html#testimonials"
+                                                style="color: white;">
+                                                Rólunk mondták</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Szolgáltatások
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: #9c1418;">
+                                        <li><a class="dropdown-item" href="./diagnostic_services.html"
+                                                style="color: white;">Diagnosztika</a></li>
+                                        <li><a class="dropdown-item" href="./od_services.html"
+                                                style="color: white;">Szervezetfejlesztés</a></li>
 
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li class="dropdown"><a href="#"><span>Szolgáltatások</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="./diagnostic_services.html">Diagnosztika</a></li>
-                            <li><a href="./od_services.html">Szervezetfejlesztés</a></li>
-                            <li><a href="./human_services.html">Humánfejlesztés</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#"><span>Rólunk</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="./index.html#about">Cégismertető</a></li>
-                            <li><a href="./index.html#team">Szakértőink</a></li>
-                            <li><a href="./index.html#testimonials">Rólunk mondták</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link scrollto" href="./index.html#contact">Kapcsolat</a></li>
-                    <li><a class="nav-link scrollto o" href="./index.html#ref">Referenciák</a></li>
-                </ul>
+                                        <li><a class="dropdown-item" href="./human_services.html"
+                                                style="color: white;">Humánfejlesztés</a></li>
+                                    </ul>
+                                </li>
 
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-        </div>
-        <div class="container d-flex align-items-center justify-content-between">
-            <a class="navbar-brand">Európa Tréning Szervezetfejlesztő és Tanácsadó Kft.</a>
-            <nav class="navbar bg-light">
-                <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Referenciák</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Kapcsolat</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search" id="form">
+                                <input class="form-control me-2" type="search" id="query" name="q" placeholder=""
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit"><i
+                                        class="bi bi-search"></i></button>
+                            </form>
+                            <!-- jscript -->
+                            <script>
+                                const f = document.getElementById('form');
+                                const q = document.getElementById('query');
+                                const google = 'https://www.google.com/search?q=site%3A+';
+                                const site = 'http://www.europatrening.hu/index.php';
+
+                                function submitted(event) {
+                                    event.preventDefault();
+                                    const url = google + site + '+' + q.value;
+                                    const win = window.open(url, '_blank');
+                                    win.focus();
+                                }
+
+                                f.addEventListener('submit', submitted);
+                            </script>
+
+                            <!-- End jscript -->
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+
                 </div>
-            </nav>
-        </div>
-    </header><!-- End Header -->
-
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
 
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
+        </nav>
+    </header>
+    <!-- End Navbar-->
 
-            </div>
-        </div>
+    <!-- Nyitokep-->
+
+    <div class="flex-container about" style="background-image: url(./img/humanfejlesztes.png); background-repeat: no-repeat; background-size: 100% 100%; 
+        padding-top: 40%; padding-bottom: 0%; text-align: center;">
+        <img src="./img/humanfejlesztes_kerek.png" width="150px"
+            style="margin: 0%; position: static; margin-bottom: -7%;">
+
     </div>
 
-    <!-- ======= Workshop ======= -->
-    <section id="workshop" class="about">
-        <div class="container">
+    <!-- End Nyitokep -->
 
-            <div class="section-title">
-                <h2>Workshop</h2>
+    <!-- ======= Humánfejlesztés bevezető ======= -->
+    <section id="diagbev" class="about">
+        <div class="container" style="padding-top: 0px; background-color: rgba(0,0,0,0.2); max-width: 100%;">
+
+            <div class="section-title" style="max-width: 100%;">
+                <h2
+                    style="text-align: center; padding-top: 100px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700;">
+                    HUMÁNFEJLESZTÉS</h2>
             </div>
 
-            <div class="row content" style="text-align: justify;">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8">
-                    <p>
-                        A workshop az egyének kreativitásának, ötleteinek, tudásának, tapasztalatainak szinergikus
-                        összegzésére alkalmas csoportos alkotó módszerek gyűjtőfogalma. A workshop olyan irányított
-                        műhelymunka, amely előre meghatározott struktúra szerint, moderátor által vezetett beszélgetés
-                        során egy ismeretkör feldolgozását és a megszerzett ismeretek későbbi alkalmazását teszi
-                        lehetővé. Célja lehet a csoportos alkotási folyamat, a diagnosztika, a helyzetfeltárás, a
-                        célgenerálás és a feladattervezés, valamint olyan értékek felszínre hozása és rögzítése, amelyek
-                        a résztvevők további fejlődését önálló folyamattá teszik. A módszer hatékonysága az előzetes
-                        felkészültségnek, intenzív vitáknak és az önálló problémamegoldással történő feladat
-                        végrehajtásnak köszönhető.
+            <div class="row content">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <p
+                        style="font-family: 'Raleway' Medium; font-size: 20pt; text-align: center; padding-top: 80px; padding-bottom: 80px;">
+                        A humánfejlesztés alatt olyan alkalmak értendők, ahol a résztvevők tudásának és módszereinek
+                        bővítése zajlik, aktuális helyzetükhöz alkalmazkodva. Tehát a helyzet megismerését követően az
+                        adott résztvevő/munkacsoport a humánfejlesztő szakember segítségével a mindennapokba illeszthető
+                        megoldást keres, és módszert ad annak kezelésére. A humánfejlesztésnek különböző formái
+                        léteznek, mint workshop, a tréning és a coaching.
                     </p>
-                    <h3>
-                        Problémafeltáró workshop
-                    </h3>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a moderált szituációkban rövid idő alatt kerülnek
-                            felszínre és egy úttal megoldásra a különböző munkahelyi feszültségek, ez által sokkal
-                            hamarabb kerülhet sor a kitűzött célok, feladatok megvalósítására</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a közös szellemi együttműködés során modellek és
-                            megoldási-prototípusok születnek</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a teljesítménytartalékot egy rövid időszakra
-                            koncentrálja, elsődleges célja a munkavégzés és a problémamegoldás segítése</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>munkahelyi környezetben is alkalmazható</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>egy adott témára koncentrál</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>közös, kreatív, csoportszellemet erősítő alkotótechnika
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>értelmezhető az együttműködés és a kommunikáció szintjén
-                        </li>
-                    </ul>
-                    <h3>
-                        Helyzetelemző workshop
-                    </h3>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a moderált szituációkban rövid idő alatt kerülnek
-                            felszínre a munkahelyi problémák, amelyeket más-más nézőpontból vizsgál a csoport, és a
-                            csoportvezető segítségével megoldásokat keresnek</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>szervezeti működés megismerése a munkavállalók
-                            szemüvegén keresztül</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>munkahelyi környezetben is alkalmazható</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>egy adott témára koncentrál</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>közös, kreatív, csoportszellemet erősítő alkotótechnika
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>értelmezhető a szervezet, a folyamatok és a működési
-                            sajátosságok szintjén
-                        </li>
-                    </ul>
-                    <h3>
-                        Diagnosztikai workshop
-                    </h3>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>4-6 fő részvételével lebonyolított csoportos vizsgálat,
-                            egy speciális assessment center (AC)</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a résztvevők olyan döntési, probléma-megoldási,
-                            delegálási, konfliktuskezelési stb. helyzetgyakorlatokban vesznek részt, amelyek a
-                            mindennapjaikban rendszeresen előfordulnak </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a gyakorlatok megidézik a munka világának szakmai
-                            dilemmáit és emberi viszonylatait, a hierarchikus relációkat és a függelmi helyzeteket</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>tanulságos és élvezetes szituációk</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>viselkedéselemző szakértőink lehetőséget kapnak arra,
-                            hogy a szereplők magatartását vizsgálat tárgyává tegyék
-                        </li>
-                    </ul>
                 </div>
+                <div class="col-lg-3"></div>
 
             </div>
 
         </div>
-    </section><!-- End Workshop Section -->
+    </section><!-- End Humánfejlesztés bevezető Section -->
 
-    <!-- ======= Training Section ======= -->
-    <section id="training" class="about">
-        <div class="container">
+    <!-- Nyitokep-->
 
-            <div class="section-title">
-                <h2>Tréning</h2>
+    <div id="workshop" class="flex-container about" style="background-image: url(./img/workshop.jpg); background-repeat: no-repeat; background-size: 100% 100%; 
+padding-top: 40%; padding-bottom: 0%; text-align: center;">
+    </div>
+
+    <!-- End Nyitokep -->
+
+    <!-- ======= Workshop ======= -->
+    <section class="about">
+        <div class="container" style="padding-top: 0px; background-color: #9c1418; max-width: 100%;">
+
+            <div class="section-title" style="background-color: #9c1418; max-width: 100%;">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <h2
+                            style="text-align: center; padding-top: 80px; padding-bottom: 60px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: white;">
+                            WORKSHOP</h2>
+                        <p
+                            style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: white; padding-bottom: 60px;">
+                            A WORKSHOP OLYAN IRÁNYÍTOTT MŰHELYMUNKA, AMELY ELŐRE MEGHATÁROZOTT STRUKTÚRA SZERINT,
+                            MODERÁTOR ÁLTAL VEZETETT BESZÉLGETÉS SORÁN EGY ISMERETKÖR FELDOLGOZÁSÁT ÉS A MEGSZERZETT
+                            ISMERETEK KÉSŐBBI ALKALMAZÁSÁT TESZI LEHETŐVÉ. CÉLJA LEHET A CSOPORTOS ALKOTÁSI FOLYAMAT,
+                            <br>A
+                            DIAGNOSZTIKA, A HELYZETFELTÁRÁS, A CÉLGENERÁLÁS ÉS A FELADATTERVEZÉS, VALAMINT OLYAN ÉRTÉKEK
+                            FELSZÍNRE HOZÁSA ÉS RÖGZÍTÉSE, AMELYEK A RÉSZTVEVŐK TOVÁBBI FEJLŐDÉSÉT ÖNÁLLÓ FOLYAMATTÁ
+                            TESZIK.
+                        </p>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
             </div>
-
-            <div class="row content" style="text-align: justify;">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8">
-                    <p>
-                        A tréning egy olyan komplex (tovább)képzési módszer, amelynek keretében bizonyos kompetenciák,
-                        készségek, jártasságok megszerzésére irányuló csoportos felkészítés történik. A közös munka
-                        során azok a szükséges elméleti ismeretek kerülnek feldolgozásra, amelyek biztosítják a
-                        kompetenciák gyakorlati alkalmazását. A tanultakat a résztvevők a mindennapi környezetüket
-                        modellező gyakorlatokban alkalmazzák, és folyamatosan visszajelzést kapnak fejlődésükről a
-                        csoporttársaiktól és a tréning vezetőjétől egyaránt.
+        </div>
+        <div class="container" style="padding-top: 0px; background-color: white; max-width: 100%;">
+            <div class="row content">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h2
+                        style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: #9c1418;">
+                        PROBLÉMAFELTÁRÓ WORKSHOP</h2>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        - a moderált szituációkban rövid idő alatt kerülnek felszínre és egy úttal megoldásra a
+                        különböző munkahelyi feszültségek, ez által sokkal hamarabb kerülhet sor a kitűzött célok,
+                        feladatok megvalósítására</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        - a közös szellemi együttműködés során modellek és megoldási-prototípusok születnek</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        - a teljesítménytartalékot egy rövid időszakra koncentrálja, elsődleges célja a munkavégzés és a
+                        problémamegoldás segítése</p>
+                    <h2
+                        style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: #9c1418;">
+                        HELYZETELEMZŐ WORKSHOP</h2>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        - a moderált szituációkban rövid idő alatt kerülnek felszínre a munkahelyi problémák, amelyeket
+                        más-más nézőpontból vizsgál a csoport, és a csoportvezető segítségével megoldásokat keresnek</p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        - szervezeti működés megismerése a munkavállalók szemüvegén keresztül</p>
+                    <h2
+                        style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: #9c1418;">
+                        DIAGNOSZTIKAI WORKSHOP</h2>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        - 4-6 fő részvételével lebonyolított csoportos vizsgálat, egy speciális assessment center (AC)
                     </p>
-                    <p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        - a résztvevők olyan döntési, probléma-megoldási, delegálási, konfliktuskezelési stb.
+                        helyzetgyakorlatokban vesznek részt, amelyek a mindennapjaikban rendszeresen előfordulnak</p>
+                    <p
+                        style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; padding-bottom: 60px;">
+                        - viselkedéselemző szakértőink lehetőséget kapnak arra, hogy a szereplők magatartását vizsgálat
+                        tárgyává tegyék</p>
+                </div>
+                <div class="col-lg-3"></div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- End Workshop Section -->
+
+    <!-- Nyitokep-->
+
+    <div id="training" class="flex-container about" style="background-image: url(./img/trening.jpg); background-repeat: no-repeat; background-size: 100% 100%; 
+ padding-top: 40%; padding-bottom: 0%; text-align: center;">
+    </div>
+
+    <!-- End Nyitokep -->
+
+    <!-- ======= Tréning Section ======= -->
+    <section class="about">
+        <div class="container" style="padding-top: 0px; background-color: #9c1418; max-width: 100%;">
+
+            <div class="section-title" style="background-color: #9c1418;">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <h2
+                            style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: white;">
+                            TRÉNING</h2>
+                        <p
+                            style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: white; padding-bottom: 60px;">
+                            A TRÉNING EGY OLYAN KOMPLEX (TOVÁBB)KÉPZÉSI MÓDSZER, AMELYNEK KERETÉBEN BIZONYOS
+                            KOMPETENCIÁK, KÉSZSÉGEK, JÁRTASSÁGOK MEGSZERZÉSÉRE IRÁNYULÓ CSOPORTOS FELKÉSZÍTÉS TÖRTÉNIK.
+                        </p>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="padding-top: 0px; background-color: white; max-width: 100%;">
+            <div class="row content">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <p
+                        style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; padding-top: 60px;">
                         A tréningek különbözőek témájukat, céljukat és célcsoportjukat tekintve, ezért szakmai
                         felelősségünknek tartjuk, hogy a megfelelő programot alakítsuk ki, az Ön igényeinek
                         figyelembevételével. A sok éves vállalati gyakorlattal rendelkező trénereinknek nagy szakmai
-                        tapasztalata van a különböző tematikájú tréningek lebonyolításában.
-                    </p>
-                    <p>
-                        Legyen szó
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>a mindennapi munkához elengedhetetlen önismereti,
-                            kommunikációs, és konfliktuskezelési tréningről, vagy </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i> egy meghatározott célcsoportot érintő témáról, mint
-                            amilyen a vezetői magatartás, a delegálás, a vezetői eszköztár, a döntéshozatal, és az
-                            eladás technika.</li>
-                    </ul>
-                    <p>
-                        Kérjük, itt jelezze, milyen témájú tréning iránt érdeklődik, és munkatársaink küldenek Önnek egy
-                        programjavaslatot.
-                    </p>
+                        tapasztalata van a különböző tematikájú tréningek lebonyolításában. </p>
+                    <p
+                        style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; padding-top: 40px; padding-bottom: 40px;">
+                        LEGYEN SZÓ </p>
+                    <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                        - a mindennapi munkához elengedhetetlen önismereti, kommunikációs, és konfliktuskezelési
+                        tréningről, vagy</p>
+                    <p
+                        style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black; padding-bottom: 80px;">
+                        - egy meghatározott célcsoportot érintő témáról, mint amilyen a vezetői magatartás, a delegálás,
+                        a vezetői eszköztár, a döntéshozatal, és az eladás technika.</p>
+                </div>
+                <div class="col-lg-3"></div>
+
+            </div>
+        </div>
+        <!-- ======= End Tréning Section ======= -->
+
+        <!-- Nyitokep-->
+
+        <div id="coaching" class="flex-container about" style="background-image: url(./img/coaching.jpg); background-repeat: no-repeat; background-size: 100% 100%; 
+padding-top: 40%; padding-bottom: 0%; text-align: center;">
+        </div>
+
+        <!-- End Nyitokep -->
+
+        <!-- Coaching -->
+
+        <section class="about">
+            <div class="container" style="padding-top: 0px; background-color: #9c1418; max-width: 100%;">
+
+                <div class="section-title" style="background-color: #9c1418;">
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <h2
+                                style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: white;">
+                                COACHING</h2>
+                            <p
+                                style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: white; padding-bottom: 60px;">
+                                A COACHING SPECIÁLIS MÓDSZER, FÓKUSZA ÉS CÉLJA AZ EGYÉNEK, CSOPORTOK ÉS SZERVEZETEK
+                                SZAKMAI FEJLESZTÉSE. A COACHING EGY CÉL- ÉS JÖVŐORIENTÁLT FOLYAMAT, AMELYBEN A COACH
+                                MODERÁLÓ SZEREPET TÖLT BE ÉS SEGÍTI A BELSŐ GONDOLKODÁST.
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
                 </div>
             </div>
+            <div class="container" style="padding-top: 0px; background-color: white; max-width: 100%;">
+                <div class="row content">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <h2
+                            style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: #9c1418;">
+                            EGYÉNI COACHING</h2>
+                        <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                            Az egyéni coaching legfőbb előnye, hogy maximálisan figyelembe veszi a személyes készségeket
+                            és képességeket, az egyéni célokat, valamint az érzelmeket. </p>
+                        <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                            Egyéni coaching három területen:</p>
+                        <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                            - <strong>life</strong> coaching – életmódvezetés</p>
+                        <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                            - <strong>business</strong> coaching – üzleti döntéseket segítő coach-technika</p>
+                        <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                            - <strong>executive</strong> coaching – tapasztalt vezetők menedzselése
+                        </p>
+                        <h2
+                            style="text-align: center; padding-top: 80px; padding-bottom: 20px; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; color: #9c1418;">
+                            CSOPORTOS VEZETŐI COACHING</h2>
+                        <p style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;">
+                            A csoportos coaching (2-4 fő) általában egyazon szervezetben dolgozó vezetők közös,
+                            kiscsoportos fejlesztési folyamata. </p>
+                        <p
+                            style="font-family: 'Raleway' Medium; font-size: 18pt; text-align: center; color: black;padding-bottom: 80px;">
+                            A csoportos coaching során a közös tanulás kerül fókuszba, amelyet számos módszertan -
+                            gyakran kombinált - alkalmazásával támogatunk az adott szervezet kultúrájához, a résztvevők
+                            igényeihez és a behozott esetek jellegéhez igazítva.</p>
 
-        </div>
-    </section><!-- End Training Section -->
+                    </div>
+                    <div class="col-lg-3"></div>
 
-    <!-- ======= Coachig Section ======= -->
-    <section id="coaching" class="about">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Coaching</h2>
-            </div>
-
-            <div class="row content" style="text-align: justify;">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8">
-                    <p>
-                        A coaching speciális módszer, fókusza és célja az egyének, csoportok és szervezetek szakmai
-                        fejlesztése. A coaching egy cél- és jövőorientált folyamat, amelyben a coach moderáló szerepet
-                        tölt be és segíti a belső gondolkodást.
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>A coaching egy olyan képzési-, képződési folyamat,
-                            amely képessé teszi a coacheet (klienst) arra, hogy kibontakoztassa, továbbfejlessze egyéni
-                            képességeit, készségeit, kompetenciáit.</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>Emellet a coaching célja az egyéni és a szervezeti
-                            változások támogatása, valamint a mindennapi élet és munka során megjelenő feszültségek és
-                            konfliktusok csökkentése. </li>
-                    </ul>
-                    <h3>
-                        Egyéni coaching
-                    </h3>
-                    <p>
-                        Az egyéni coaching legfőbb előnye, hogy maximálisan figyelembe veszi a személyes készségeket és
-                        képességeket, az egyéni célokat, valamint az érzelmeket.
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>A kliens és a coach együtt határozza meg az elérendő
-                            célokat, a szándékot a fejlesztési folyamattal kapcsolatosan és a szükségleteiket, amelyre a
-                            teljes folyamat épül.</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>A coach a folyamat során segíti az egyént abban, hogy
-                            a személyiségéhez illeszkedő megoldásmódokat dolgozzon ki a problémák megoldásához. </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>A kliens a coaching során személyre szabott ütemben
-                            sajátítja el mindazon készségfejlesztési technikákat és módszereket, amelyek hatékonyabbá
-                            teszik őt az életében.</li>
-                    </ul>
-                    <p>
-                        Egyéni coaching három területen:
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i><strong>life</strong> coaching - életmódvezetés</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i><strong>business</strong> coaching - üzleti döntéseket
-                            segítő coach-technika</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i><strong>executive</strong> coaching - tapasztalt vezetők
-                            menedzselése</li>
-                    </ul>
-                    <p>
-                        A coaching folyamata:
-                    </p>
-                    <p>
-                        Egy-egy találkozás időtartama: 60-90 perc
-                    </p>
-                    <p>
-                        A találkozások sűrűsége a közösen megoldandó feladatok nagyságától függően egyeztetés tárgyát
-                        képezik.
-                    </p>
-                    <h3>Csoportos vezetői coaching</h3>
-                    <p>
-                        A csoportos coaching (2-4 fő) általában egyazon szervezetben dolgozó vezetők közös, kiscsoportos
-                        fejlesztési folyamata. A tréningtől abban különbözik, hogy nem egy konkrét kompetenciát vagy
-                        készséget helyez a fókuszba, hanem valós szervezeti kérdéseket, problémákat. A csoportos
-                        coachingnál nem csak kognitív (azaz gondolati/racionális), hanem kapcsolati és érzelmi síkon is
-                        körbejárjuk a problémát, és a megoldást nem technikai szinten kínáljuk fel, hanem helyben
-                        találunk rá megoldási kulcsokat, melyet azonnal el is fogadtathatunk a csoporttal.
-                    </p>
-                    <ul>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>A csoportos coaching során a közös tanulás kerül
-                            fókuszba, amelyet számos módszertan - gyakran kombinált - alkalmazásával támogatunk az adott
-                            szervezet kultúrájához, a résztvevők igényeihez és a behozott esetek jellegéhez igazítva.
-                        </li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>A coach megismerteti a csoportos coachingba bevont
-                            személyekkel azokat a viselkedési attitűdöket, amelyek alkalmazása által gördülékenyebbé
-                            válnak a menedzselési folyamatok.</li>
-                        <li><i class="ri-check-double-line" style="color: #7B021A;"></i>A csoportos coaching célja egyénre szabott személyes
-                            fejlesztés biztosítása a felső- és középvezetők részére, a vezetők egyéni szükségleteihez,
-                            fejlesztési igényeihez igazodó külső tanácsadóval, aki támogatást nyújt különböző vezetői
-                            kompetenciáik gyakorlásában, új helyzetek tudatos megélésében, nehézségek feltárásában, a
-                            megoldáskeresésben, fejlesztési célok kitűzésében, akcióterv elkészítésében, és a fejlődés
-                            nyomon követésében - valamint folyamatos visszajelzést biztosít a fejlesztési folyamat
-                            során.</li>
-                    </ul>
-                    <p>
-                        Egy-egy találkozás időtartama 90 perc.
-                    </p>
-                    <p>
-                        A találkozások sűrűsége a közösen megoldandó feladatok nagyságától függően egyeztetés tárgyát
-                        képezik.
-                    </p>
                 </div>
             </div>
+            <!-- End Coaching -->
 
-        </div>
-    </section><!-- End Coachig Section -->
+            <!-- Contact -->
 
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-
-        <div class="footer-top">
-            <div class="container">
+            <div class="container text-center"
+                style="padding-top: 30px; padding-bottom: 30px; background-image: url(./img/papircsonak.jpg); background-repeat: no-repeat; background-size: 100% 100%; max-width: 100%;">
                 <div class="row">
+                    <h2
+                        style="color: black; font-family: 'Raleway', bold; font-size: 28pt; font-weight: 700; padding-bottom: 3%;">
+                        VEGYE FEL VELÜNK A KAPCSOLATOT
+                    </h2>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-5" style="text-align: left; padding-top: 17px;">
+                        <iframe style="border:0; width: 100%; height: 270px; border-radius: 10px;"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.6591946227677!2d19.057898715818055!3d47.49655220356657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc4267290903%3A0xbeb463ab7628bd4b!2sBudapest%2C%20Wessel%C3%A9nyi%20u.%204%2C%201077!5e0!3m2!1shu!2shu!4v1659009074305!5m2!1shu!2shu"
+                            frameborder="0" allowfullscreen></iframe>
+                        <h4 style="font-family: 'Raleway', bold; font-size: 16pt; font-weight: 700; padding-top: 2%;">
+                            Európa
+                            Tréning Kft.</h4>
+                        <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                                class="bi bi-house-door-fill"></i>1077 Budapest, Wesselényi utca 4.
+                            4. em. 23.</p>
+                        <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                                class="bi bi-telephone-fill"></i>+36 1 411-0640</p>
+                        <p style="font-family: 'Raleway' medium; font-size: 12pt; margin: 0%;"><i
+                                class="bi bi-envelope"></i>europatrening@europatrening.hu</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <form action="mailto:europatrening@europatrening.hu" method="post" role="form"
+                            enctype="text/plain" class="php-email-form"
+                            style="background-color: transparent; border-radius: 10px; height: 100%; padding: 0%;">
+                            <div class="form-group mt-3" style="padding-top: 0%; border-color: black; border: 2px;">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Név:"
+                                    required style="border: #bbb; border-style: solid;">
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="E-mail cím:" required style="border: #bbb; border-style: solid;">
+                            </div>
 
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Európa Tréning Kft.</h3>
-                        <p>
-                            1077 Budapest <br>
-                            Wesselényi utca 4. 4. em. 23.<br>
-                            <br><br>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Tárgy:"
+                                    required style="border: #bbb; border-style: solid;">
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Üzenet:" required
+                                    style="height: 220px; border: #bbb; border-style: solid;"></textarea>
+                            </div>
 
+                            <div class="textarea" style="text-align: right;"><button type="submit"
+                                    style="color: #9c1418; border-style: hidden; border-radius: 10px;"><i
+                                        class="bi bi-caret-right-fill" style="height: 50px;"></i></button></div>
+                        </form>
+
+                    </div>
+                    <div class="col-lg-1"></div>
+
+                </div>
+            </div>
+
+            <!-- End Contact -->
+
+            <!-- Footer -->
+
+            <div class="container text-center"
+                style="padding-top: 50px; padding-bottom: 30px; background-color: #9c1418; max-width: 100%;">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-3">
+                        <p style="color: white; text-align: center; padding-left: 0%; padding-right: 0%;">
+                            <i class="bi bi-c-circle"></i>MINDEN JOG FENNTARTVA
                         </p>
                     </div>
-
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Menü</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#about">Rólunk</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#contact">Kapcsolat</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#ref">Referenciák</a></li>
-                        </ul>
+                    <div class="col-3">
+                        <p style="color: white; text-align: center; margin: 0%;">
+                            ADATKEZELÉSI TÁJÉKOZTATÓ
+                        </p>
                     </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
+                    <div class="col-lg-2">
+                        <p style="color: white; text-align: center;">
+                            IMPRESSZUM
+                        </p>
                     </div>
-
-                    <div class="col-lg-2 col-md-6 footer-newsletter">
-                        <div>
-                            <a href="https://www.facebook.com/profile.php?id=100086475879847" class="facebook"><img
-                                    src="./assets/img/facebook.png" width="70px"></a>
-                            <a href="https://www.instagram.com/europatrening_hu/"><img src="./assets/img/instagram.png"
-                                    width="40px"></a>
-                        </div>
+                    <div class="col-lg-2">
+                        <p style="text-align: center; font-size: 28pt; margin: 0%;">
+                            <a href="https://www.facebook.com/profile.php?id=100086475879847"
+                                style="color: darkgray;"><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/europatrening_hu/" style="color: darkgray;"><i
+                                    class="bi bi-instagram"></i></a>
+                        </p>
                     </div>
-                    <div id="preloader" class="col-lg-2"></div>
-                    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-                            class="bi bi-arrow-up-short"></i></a>
+                    <div class="col-3"></div>
                 </div>
             </div>
-        </div>
+            <!-- End Footer -->
 
+            <!-- JavaScript -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+                crossorigin="anonymous"></script>
 
-    </footer><!-- End Footer -->
+            <!-- About us -->
+            <script>
+                var multipleCardCarousel = document.querySelector("#carouselExampleControls");
+                if (window.matchMedia("(min-width: 768px)").matches) {
+                    var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                        interval: false,
+                    });
+                    var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+                    var cardWidth = $(".carousel-item").width();
+                    var scrollPosition = 0;
+                    $("#carouselExampleControls .carousel-control-next").on("click", function () {
+                        if (scrollPosition < carouselWidth - cardWidth * 4) {
+                            scrollPosition += cardWidth;
+                            $("#carouselExampleControls .carousel-inner").animate(
+                                { scrollLeft: scrollPosition },
+                                600
+                            );
+                        }
+                    });
+                    $("#carouselExampleControls .carousel-control-prev").on("click", function () {
+                        if (scrollPosition > 0) {
+                            scrollPosition -= cardWidth;
+                            $("#carouselExampleControls .carousel-inner").animate(
+                                { scrollLeft: scrollPosition },
+                                600
+                            );
+                        }
+                    });
+                } else {
+                    $(multipleCardCarousel).addClass("slide");
+                }
+            </script>
+            <!-- End About us -->
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-
+            <!-- End JavaScript -->
 </body>
 
 </html>
